@@ -25,7 +25,7 @@ background-size: cover;
 
 
 .header{
-    padding: 15 px;
+    padding: 15px;
     height:100vh;
     background:url(../images/background.jpg);
     background-size: cover;
@@ -88,4 +88,73 @@ background-size: cover;
     font-size: 23px;
     color:#31a7fb;
     rotate: 90deg;
+}
+
+
+
+.welcome{
+    width:400px;
+    height:400px;
+    position: absolute;
+    top:0;
+    left:50px;
+    bottom:0;
+    margin:auto;
+}
+
+
+.welcome h2{
+    text-align: center;
+    font:55px moon;
+    color:white;
+    line-height: 60px;
+}
+
+.welcome h2 span{
+    color:#31a7fb;
+}
+
+.welcome h2 span span{
+    color:#fba83c;
+}
+
+
+.welcome p{
+    font:13px moon;
+    color:#ccc;
+    text-align: center;
+}
+
+.links{
+    text-align: center;
+    width: 100%;
+
+}
+
+.links a{
+    font:13px moon;
+    margin:0 5px;
+}
+
+.links svg{
+    margin-right: 5px;
+}
+
+.go-to-content{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:0;
+    bottom:20px;
+    right:0;
+    margin:auto;
+}
+
+.go-to-content svg{
+    color:#31a7fb;
+    text-shadow: 0 0 5px #31a7fb;
+    font-size:20px;
+    margin:15px auto;
+    display: block;
+    cursor: pointer;
 }

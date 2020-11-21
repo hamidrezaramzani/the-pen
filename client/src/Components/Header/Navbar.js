@@ -11,8 +11,8 @@ const NavbarMenu = () => {
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#link">Contact me</Nav.Link>
                 <Nav.Link href="#link">About Us</Nav.Link>
-                <Nav.Link href="#link">Sign Up</Nav.Link>
-                <Nav.Link href="#link">Sign In</Nav.Link>
+                <Nav.Link href="#link">Last Notes</Nav.Link>
+                <Nav.Link href="#link">Best Notes</Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar></Col>;
