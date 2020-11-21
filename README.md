@@ -1,3 +1,3 @@
 # the pen
 
-like virgool.com
+like virgool.io
