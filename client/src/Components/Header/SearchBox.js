@@ -8,7 +8,7 @@ const SearchBox = () => {
                 <input type="text" name="search" placeholder="search..." className="search-input" />
             </div>
         </form>
-    </Col>
+    </Col>;
 };
 
 export default SearchBox;

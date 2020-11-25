@@ -1,5 +1,5 @@
 import { Row, Container } from "react-bootstrap";
-import { FaAngleDoubleDown, FaAngleDown, FaArrowAltCircleDown, FaCaretDown } from "react-icons/fa";
+import { FaAngleDoubleDown } from "react-icons/fa";
 import NavbarMenu from "../Header/Navbar";
 import SearchBox from "../Header/SearchBox";
 import Welcome from "../Header/Welcome";

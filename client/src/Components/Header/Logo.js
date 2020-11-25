@@ -1,4 +1,4 @@
-import penLogo from '../../images/pen.png'
+import penLogo from '../../images/pen.png';
 function Logo() {
     return <div className="logo">
         <img src={penLogo} alt="pen logo" />

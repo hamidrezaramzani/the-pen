@@ -1,9 +1,7 @@
 import { Nav, Navbar } from 'react-bootstrap';
 import Col from 'react-bootstrap/Col';
-import Logo from '../Header/Logo';
 const MainNavbar = () => {
-    return <Col xs="12" lg="12"><Navbar expand="lg">
-        <Navbar.Brand href="#home"><Logo /></Navbar.Brand>
+    return <Col xs="12" lg="12" className="main-navbar-menu"><Navbar expand="lg">
         <Navbar.Toggle aria-controls="main-navbar" />
         <Navbar.Collapse id="main-navbar">
             <Nav className="mr-auto main-navbar" >
@@ -18,6 +16,6 @@ const MainNavbar = () => {
             </Nav>
         </Navbar.Collapse>
     </Navbar></Col>;
-}
+};
 
 export default MainNavbar;

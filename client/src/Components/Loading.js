@@ -1,9 +1,9 @@
-const { Spinner } = require("react-bootstrap")
+const { Spinner } = require("react-bootstrap");
 
 const Loading = () => {
     return <div className="loading-box">
         <Spinner animation="border" variant="primary"  />
-    </div>
+    </div>;
 };
 
 export default Loading;

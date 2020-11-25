@@ -1,9 +1,9 @@
 import { Col } from "react-bootstrap";
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import 'react-slideshow-image/dist/styles.css';
 import SlideItem from "./SlideItem";
 const MainSlideShow = () => {
-    return <Col xs="12" md="6">
+    return <Col xs="12" md="8">
         <div cla1ssName="slide-container">
             <Slide>
                 <SlideItem />                
@@ -11,7 +11,7 @@ const MainSlideShow = () => {
                 <SlideItem />                
             </Slide>
         </div>
-    </Col>
+    </Col>;
 };
 
 

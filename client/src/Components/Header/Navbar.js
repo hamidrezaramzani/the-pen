@@ -1,5 +1,5 @@
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import Logo from "../Header/Logo";
 import Col from 'react-bootstrap/Col';
 const NavbarMenu = () => {
