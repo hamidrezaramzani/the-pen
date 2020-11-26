@@ -1,4 +1,5 @@
 import { Container, Row } from "react-bootstrap";
+import HomeContent from "./HomeContent";
 import MainNavbar from "./MainNavbar";
 import MainSlideShow from "./MainSlideShow";
 import PostList from "./PostList";
@@ -11,6 +12,7 @@ const Home = () => {
                 <MainSlideShow />
                 <PostList />
                 <Welcome />
+                <HomeContent />
             </Row>
         </Container>
     </>;
