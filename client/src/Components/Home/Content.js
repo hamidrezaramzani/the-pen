@@ -1,7 +1,12 @@
 import Col from 'react-bootstrap/Col';
+import PostItem from './PostItem';
 const Content = () => {
     return <Col xs="12" md="9">
-               Hello
+               <PostItem />
+               <PostItem />
+               <PostItem />
+               <PostItem />
+               <PostItem />
           </Col>;
 };
 

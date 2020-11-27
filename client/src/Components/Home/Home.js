@@ -11,7 +11,7 @@ const Home = () => {
                 <MainNavbar />
                 <MainSlideShow />
                 <PostList />
-                <Welcome />
+                <Welcome />            
                 <HomeContent />
             </Row>
         </Container>
