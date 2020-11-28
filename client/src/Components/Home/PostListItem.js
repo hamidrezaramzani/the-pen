@@ -9,6 +9,8 @@ const PostListItem = () => {
         Novamber 26 , 2020 01:41
         <FaClock />
       </p>
+      <span>writed by hamidreza</span>
+
       <div className="post-item-category">Music</div>
     </div>
   );
