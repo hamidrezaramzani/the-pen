@@ -63,34 +63,28 @@ body {
     font: 11px "moon";
 }
 
-.search-input {
-    height: 33px;
-    width: 80%;
-    background: transparent;
-    border: none;
-    float: right;
-    color: #31a7fb;
-    font: 12px moon;
-    padding-right: 15px;
-}
-
 .search-input::placeholder {
     text-align: right;
 }
 
 .search-input-box {
-    width: 30%;
+    width: 100%;
     height: auto;
     margin-top: 5px;
     float: right;
-    border-bottom: 1px solid #31a7fb;
+}
+
+.search-input-box button {
+    text-align: right;
+    color: #fff!important;
 }
 
 .search-input-box svg {
     float: right;
-    font-size: 23px;
-    color: #31a7fb;
+    font-size: 18px;
+    color: #fff;
     rotate: 90deg;
+    margin: 0 5px;
 }
 
 .welcome {

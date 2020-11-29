@@ -8,9 +8,7 @@ function Header() {
         <Row justify-content-center className="header">
             <NavbarMenu />
             <SearchBox />
-
             <Welcome />
-
             <div className="go-to-content">
                 <FaAngleDoubleDown  />
             </div>
