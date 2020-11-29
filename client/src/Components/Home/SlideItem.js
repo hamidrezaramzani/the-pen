@@ -1,4 +1,4 @@
-import background from "../../images/background.jpg";
+import background from "../../images/slide.jpg";
 import profile from "../../images/profile.png";
 import Link from "react-router-dom/Link";
 const SlideItem = () => {

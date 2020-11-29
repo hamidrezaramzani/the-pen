@@ -13,6 +13,11 @@ const MainNavbar = () => {
                 <Nav.Link href="#link">Hardware</Nav.Link>
                 <Nav.Link href="#link">AI</Nav.Link>
                 <Nav.Link href="#link">Policies</Nav.Link>
+                <Nav.Link href="#home">Sport</Nav.Link>
+                <Nav.Link href="#link">Programming</Nav.Link>
+                <Nav.Link href="#link">Social Media</Nav.Link>
+                <Nav.Link href="#link">Food</Nav.Link>
+        
             </Nav>
         </Navbar.Collapse>
     </Navbar></Col>;

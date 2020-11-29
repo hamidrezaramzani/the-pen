@@ -1,17 +1,11 @@
-import image from "../../images/background.jpg";
-import { FaClock } from "react-icons/fa";
 const PostListItem = () => {
   return (
     <div className="post-list-item">
-      <img src={image} alt="post item" />
-      <h3>Fuck Your Ideas</h3>
-      <p>
-        Novamber 26 , 2020 01:41
-        <FaClock />
-      </p>
-      <span>writed by hamidreza</span>
-
-      <div className="post-item-category">Music</div>
+      <div className="post-list-item-content">
+        <div className="post-item-category">technology</div>
+        <h3>This is my name and my name is hamidreza</h3>
+        <p>Hamidreza Ramzani - 4 days ago</p>
+      </div>
     </div>
   );
 };

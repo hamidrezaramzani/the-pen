@@ -170,12 +170,12 @@ body {
 
 .main-navbar a {
     color: #fff !important;
-    font: 13px "moon";
+    font: 10px "moon";
 }
 
 .each-slide {
     position: relative;
-    height: 450px !important;
+    height: 550px !important;
 }
 
 .each-slide .slider-background {
@@ -184,27 +184,34 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 5px;
 }
 
 .slider-content {
     width: 100%;
-    height: 50px;
+    height: auto;
     position: absolute;
-    bottom: 150px;
+    bottom: 0;
     left: 0;
     padding: 20px;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0, rgba(12, 98, 99, .5) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: all .5s ease;
+}
+
+.each-slide:hover .slider-content {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0, rgba(8, 76, 77, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: all .5s ease;
 }
 
 .slider-content h3 {
     color: aqua;
-    font-family: moon;
-    margin: 0;
+    font: 22px moon;
     padding: 0;
 }
 
 .slider-content p {
-    font: 12px moon;
+    font: 11px moon;
     color: #ccc;
 }
 
@@ -225,7 +232,7 @@ body {
     float: left;
     margin-left: 10px;
     color: aqua;
-    font: 14px moon;
+    font: 12px moon;
     margin-top: 10px;
     width: 70%;
     margin-bottom: 0;
@@ -234,15 +241,11 @@ body {
 
 .slider-user span {
     float: left;
-    font: 12px content;
+    font: 9px moon;
     color: #ccc;
     margin-left: 10px;
-    margin-top: 0;
+    margin-top: 3px;
     padding: 0;
-}
-
-.default-nav {
-    margin: 0 10px;
 }
 
 .slide-show-category {
@@ -250,7 +253,7 @@ body {
     background: #31a7fb;
     color: white;
     border-radius: 5px;
-    font: 14px moon;
+    font: 11px moon;
 }
 
 .slide-show-category:hover {
@@ -260,56 +263,61 @@ body {
 
 .post-list-item {
     width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background: #151515;
+    height: 50%;
+    background: url(../images/38127.jpg);
+    background-size: cover;
     position: relative;
 }
 
-.post-item-category {
-    width: 40px;
-    height: 30px;
+.post-list-item:hover .post-list-item-content {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0, rgba(8, 76, 77, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.post-list-item-content {
+    padding: 30px 15px;
+    width: 100%;
+    height: 60%;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0, rgba(12, 98, 99, .5) 0%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
-    top: 25px;
-    left: 10px;
+    bottom: 0;
+}
+
+.post-item-category {
+    /* width: 40px; */
+    display: inline-block;
+    height: 30px;
     font: 10px moon;
     text-align: center;
     line-height: 30px;
     border-radius: 5px;
-    color: #31a7fb;
-    border: 1px solid #31a7fb;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0 10px;
 }
 
 .post-item-category:hover {
-    background: #31a7fb;
-    color: #fff;
+    background: #fff;
+    color: #000;
     cursor: pointer;
 }
 
 .post-list-item h3 {
-    text-align: right;
+    text-align: left;
     color: #fff;
-    font: 14px moon;
-    float: right;
-    margin-top: 25px;
+    font: 21px moon;
+    float: left;
+    margin-top: 10px;
     margin-right: 10px;
-}
-
-.post-list-item img {
-    float: right;
-    width: 100px;
-    height: 100px;
-    /* border-radius: 100%; */
-    object-fit: cover;
 }
 
 .post-list-item p {
-    float: right;
+    float: left;
     margin-right: 10px;
     padding: 0;
     font: 10px moon;
-    color: #31a7fb;
+    color: #ccc;
 }
 
 .post-list-item span {
@@ -325,12 +333,12 @@ body {
 }
 
 .welcome-to-site {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     height: 350px;
     background: url("../images/welcome-background.jpg");
     background-size: cover;
     padding: 50px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .welcome-to-site h2 {
@@ -544,3 +552,20 @@ footer form button {
 footer form button:hover {
     background: #1c80c7;
 }
+
+.default-nav {
+    background: transparent!important;
+}
+
+.default-nav svg {
+    fill: #fff;
+}
+
+
+/* .default-nav[data-type="next"] {
+    margin-left: -70px!important;
+}
+
+.default-nav[data-type="prev"] {
+    margin-right: -70px!important;
+} */

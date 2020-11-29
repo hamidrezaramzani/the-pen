@@ -4,7 +4,7 @@ import 'react-slideshow-image/dist/styles.css';
 import SlideItem from "./SlideItem";
 const MainSlideShow = () => {
     return <Col xs="12" md="8">
-        <div cla1ssName="slide-container">
+        <div className="slide-container">
             <Slide>
                 <SlideItem />                
                 <SlideItem />                

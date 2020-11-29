@@ -6,7 +6,7 @@ import PostList from "./PostList";
 import Welcome from "./Welcome";
 const Home = () => {
     return <>
-        <Container>
+        <Container fluid>
             <Row>
                 <MainNavbar />
                 <MainSlideShow />
