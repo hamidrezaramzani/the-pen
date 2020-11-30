@@ -2,7 +2,7 @@ import express from 'express';
 import config from 'config';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
-import usersRouter from './routes/users';
+import usersRouter from './routes/users.js';
 const app = express();
 
 app.use((req, res, next) => {
@@ -15,7 +15,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use("/api/v1/", usersRouter);
+app.use("/api/v1/users", usersRouter);
 
 app.listen(config.get("PORT"), () => {
     console.log(`SERVER RUNNING ON PORT ${config.get("PORT")}`);
