@@ -1,5 +1,6 @@
 import { Row, Container } from "react-bootstrap";
 import { FaAngleDoubleDown } from "react-icons/fa";
+import { withRouter } from "react-router";
 import NavbarMenu from "../Header/Navbar";
 import SearchBox from "../Header/SearchBox";
 import Welcome from "../Header/Welcome";
@@ -16,4 +17,4 @@ function Header() {
     </Container>;
 }
 
-export default Header;
+export default withRouter(Header);

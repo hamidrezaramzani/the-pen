@@ -10,8 +10,8 @@ const Welcome = () => {
         <p>You can publish your writings among thousands of people by registering on the pen site.</p>
         <br />
         <div className="links">
-            <Link to="" className="text-warning"><FaUser />SIGN UP</Link>
-            <Link to="" className="text-info"><FaSignInAlt />SIGN IN</Link>
+            <Link to="/sign-up" className="text-warning"><FaUser />SIGN UP</Link>
+            <Link to="/sign-in" className="text-info"><FaSignInAlt />SIGN IN</Link>
         </div>
     </div>;
 };
