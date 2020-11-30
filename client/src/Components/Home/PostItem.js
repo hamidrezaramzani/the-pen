@@ -1,7 +1,7 @@
 import { FaUser } from 'react-icons/fa';
 import image from '../../images/background-2.jpg';
 const PostItem = () => {
-    return <div className="col-12 col-md-3 p-2">
+    return <div className="col-12 col-md-3 col-lg-4 p-2">
         <div className="post-item">
             <div className="post-item-image">
                 <img src={image} alt="post item" />

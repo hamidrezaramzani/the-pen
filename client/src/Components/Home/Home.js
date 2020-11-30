@@ -5,7 +5,7 @@ import MainSlideShow from "./MainSlideShow";
 import PostList from "./PostList";
 const Home = () => {
     return <>
-        <Container fluid>
+        <Container>
             <Row>
                 <MainNavbar />
                 <MainSlideShow />
