@@ -15,6 +15,7 @@
     "config": "^3.3.2",
     "eslint-config-node": "^4.1.0",
     "express": "^4.17.1",
+    "googleapis": "^65.0.0",
     "helmet": "^4.2.0",
     "mongodb": "^3.6.3",
     "mongoose": "^5.10.15",
