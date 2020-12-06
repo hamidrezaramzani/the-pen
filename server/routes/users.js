@@ -1,13 +1,5 @@
 import express from "express";
+import { checkDuplicateValue } from "../controllers/users.js";
 const router = express.Router();
-import { urlGoogle } from "../controllers/google-until.js";
-
-router.get("/google", (req, res) => {
-  res.redirect(urlGoogle());
-});
-
-router.get("/google-auth", () => {
-  console.log("user");
-});
-
+router.get("/check-field/:field/:value", checkDuplicateValue);
 export default router;

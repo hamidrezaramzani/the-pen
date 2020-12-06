@@ -1,682 +1,669 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 body {
-  background-color: #111;
-  overflow-x: hidden !important;
+    background-color: #111;
+    overflow-x: hidden !important;
 }
 
 @font-face {
-  font-family: "moon";
-  src: url("../fonts/MoonBold.ttf") format("truetype");
+    font-family: "moon";
+    src: url("../fonts/MoonBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "content";
-  src: url("../fonts/arial.ttf") format("truetype");
+    font-family: "content";
+    src: url("../fonts/arial.ttf") format("truetype");
 }
 
 .content {
-  font-family: "content" !important;
+    font-family: "content" !important;
 }
 
 .moon {
-  font-family: "moon";
+    font-family: "moon";
 }
 
 .header {
-  padding: 15px;
-  height: 100vh;
-  background: url(../images/background.jpg);
-  background-size: cover;
+    padding: 15px;
+    height: 100vh;
+    background: url(../images/background.jpg);
+    background-size: cover;
 }
 
 .logo img {
-  width: 35px;
-  float: left;
+    width: 35px;
+    float: left;
 }
 
 .logo h1 {
-  float: left;
-  font: 20px "moon";
-  margin-top: 7px;
-  color: #31a7fb;
-  margin-left: 5px;
+    float: left;
+    font: 20px "moon";
+    margin-top: 7px;
+    color: #31a7fb;
+    margin-left: 5px;
 }
 
 .logo h1 span {
-  color: #fba83c;
+    color: #fba83c;
 }
 
 .navbar-menu a {
-  color: #31a7fb !important;
-  font: 11px "moon";
+    color: #31a7fb !important;
+    font: 11px "moon";
 }
 
 .search-input::placeholder {
-  text-align: right;
+    text-align: right;
 }
 
 .search-input-box {
-  width: 100%;
-  height: auto;
-  margin-top: 5px;
-  float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    float: right;
 }
 
 .search-input-box button {
-  text-align: right;
-  color: #fff !important;
+    text-align: right;
+    color: #fff !important;
 }
 
 .search-input-box svg {
-  float: right;
-  font-size: 18px;
-  color: #fff;
-  rotate: 90deg;
-  margin: 0 5px;
+    float: right;
+    font-size: 18px;
+    color: #fff;
+    rotate: 90deg;
+    margin: 0 5px;
 }
 
 .welcome {
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  top: 0;
-  left: 50px;
-  bottom: 0;
-  margin: auto;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    bottom: 0;
+    margin: auto;
 }
 
 .welcome h2 {
-  text-align: center;
-  font: 45px moon;
-  color: white;
-  line-height: 60px;
+    text-align: center;
+    font: 45px moon;
+    color: white;
+    line-height: 60px;
 }
 
 .welcome h2 span {
-  color: #31a7fb;
+    color: #31a7fb;
 }
 
 .welcome h2 span span {
-  color: #fba83c;
+    color: #fba83c;
 }
 
 .welcome p {
-  font: 10px moon;
-  color: #ccc;
-  text-align: center;
+    font: 10px moon;
+    color: #ccc;
+    text-align: center;
 }
 
 .links {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
 }
 
 .links a {
-  font: 10px moon;
-  margin: 0 5px;
+    font: 10px moon;
+    margin: 0 5px;
 }
 
 .links svg {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
 .go-to-content {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 0;
-  bottom: 20px;
-  right: 0;
-  margin: auto;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    right: 0;
+    margin: auto;
 }
 
 .go-to-content svg {
-  color: #31a7fb;
-  text-shadow: 0 0 5px #31a7fb;
-  font-size: 20px;
-  margin: 15px auto;
-  display: block;
-  cursor: pointer;
+    color: #31a7fb;
+    text-shadow: 0 0 5px #31a7fb;
+    font-size: 20px;
+    margin: 15px auto;
+    display: block;
+    cursor: pointer;
 }
 
 .loading-box {
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    position: absolute;
 }
 
 .main-navbar-menu {
-  height: 50px;
-  margin: 10px 0;
+    height: 50px;
+    margin: 10px 0;
 }
 
 .main-navbar a {
-  color: #fff !important;
-  font: 10px "moon";
+    color: #fff !important;
+    font: 10px "moon";
 }
 
 .each-slide {
-  position: relative;
-  height: 550px !important;
+    position: relative;
+    height: 550px !important;
 }
 
 .each-slide .slider-background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .slider-content {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 20px;
-  background: rgb(34, 193, 195);
-  background: linear-gradient(
-    0,
-    rgba(12, 98, 99, 0.5) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  transition: all 0.5s ease;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: rgb(34, 193, 195);
+    background: linear-gradient( 0, rgba(12, 98, 99, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: all 0.5s ease;
 }
 
 .each-slide:hover .slider-content {
-  background: rgb(34, 193, 195);
-  background: linear-gradient(
-    0,
-    rgba(8, 76, 77, 0.5) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  transition: all 0.5s ease;
+    background: rgb(34, 193, 195);
+    background: linear-gradient( 0, rgba(8, 76, 77, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: all 0.5s ease;
 }
 
 .slider-content h3 {
-  color: aqua;
-  font: 22px moon;
-  padding: 0;
+    color: aqua;
+    font: 22px moon;
+    padding: 0;
 }
 
 .slider-content p {
-  font: 11px moon;
-  color: #ccc;
+    font: 11px moon;
+    color: #ccc;
 }
 
 .user-profile-slider {
-  width: 50px !important;
+    width: 50px !important;
 }
 
 .slider-user {
-  float: left;
-  /* margin-top: 20px; */
+    float: left;
+    /* margin-top: 20px; */
 }
 
 .slider-user img {
-  float: left;
+    float: left;
 }
 
 .slider-user h4 {
-  float: left;
-  margin-left: 10px;
-  color: aqua;
-  font: 12px moon;
-  margin-top: 10px;
-  width: 70%;
-  margin-bottom: 0;
-  padding: 0;
+    float: left;
+    margin-left: 10px;
+    color: aqua;
+    font: 12px moon;
+    margin-top: 10px;
+    width: 70%;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .slider-user span {
-  float: left;
-  font: 9px moon;
-  color: #ccc;
-  margin-left: 10px;
-  margin-top: 3px;
-  padding: 0;
+    float: left;
+    font: 9px moon;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 3px;
+    padding: 0;
 }
 
 .slide-show-category {
-  padding: 5px 10px;
-  background: #31a7fb;
-  color: white;
-  border-radius: 5px;
-  font: 11px moon;
+    padding: 5px 10px;
+    background: #31a7fb;
+    color: white;
+    border-radius: 5px;
+    font: 11px moon;
 }
 
 .slide-show-category:hover {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 .post-list-item {
-  width: 100%;
-  height: 50%;
-  background: url(../images/38127.jpg);
-  background-size: cover;
-  position: relative;
+    width: 100%;
+    height: 50%;
+    background: url(../images/38127.jpg);
+    background-size: cover;
+    position: relative;
 }
 
 .post-list-item:hover .post-list-item-content {
-  background: rgb(34, 193, 195);
-  background: linear-gradient(
-    0,
-    rgba(8, 76, 77, 0.5) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+    background: rgb(34, 193, 195);
+    background: linear-gradient( 0, rgba(8, 76, 77, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .post-list-item-content {
-  padding: 30px 15px;
-  width: 100%;
-  height: 60%;
-  background: rgb(34, 193, 195);
-  background: linear-gradient(
-    0,
-    rgba(12, 98, 99, 0.5) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  position: absolute;
-  bottom: 0;
+    padding: 30px 15px;
+    width: 100%;
+    height: 60%;
+    background: rgb(34, 193, 195);
+    background: linear-gradient( 0, rgba(12, 98, 99, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    bottom: 0;
 }
 
 .post-item-category {
-  /* width: 40px; */
-  display: inline-block;
-  height: 30px;
-  font: 10px moon;
-  text-align: center;
-  line-height: 30px;
-  border-radius: 5px;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 0 10px;
+    /* width: 40px; */
+    display: inline-block;
+    height: 30px;
+    font: 10px moon;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0 10px;
 }
 
 .post-item-category:hover {
-  background: #fff;
-  color: #000;
-  cursor: pointer;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
 }
 
 .post-list-item h3 {
-  text-align: left;
-  color: #fff;
-  font: 21px moon;
-  float: left;
-  margin-top: 10px;
-  margin-right: 10px;
+    text-align: left;
+    color: #fff;
+    font: 21px moon;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .post-list-item p {
-  float: left;
-  margin-right: 10px;
-  padding: 0;
-  font: 10px moon;
-  color: #ccc;
+    float: left;
+    margin-right: 10px;
+    padding: 0;
+    font: 10px moon;
+    color: #ccc;
 }
 
 .post-list-item span {
-  float: right;
-  margin-right: 10px;
-  padding: 0;
-  font: 10px moon;
-  color: #666;
+    float: right;
+    margin-right: 10px;
+    padding: 0;
+    font: 10px moon;
+    color: #666;
 }
 
 .post-list-item svg {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .welcome-to-site {
-  margin: 2rem 0;
-  height: 350px;
-  background: url("../images/welcome-background.jpg");
-  background-size: cover;
-  padding: 50px;
-  /* border-radius: 10px; */
+    margin: 2rem 0;
+    height: 350px;
+    background: url("../images/welcome-background.jpg");
+    background-size: cover;
+    padding: 50px;
+    /* border-radius: 10px; */
 }
 
 .welcome-to-site h2 {
-  text-align: left;
-  font: 33px moon;
-  color: #31a7fb;
+    text-align: left;
+    font: 33px moon;
+    color: #31a7fb;
 }
 
 .welcome-to-site p {
-  width: 55%;
-  float: left;
-  color: #fff;
-  font: 12px moon;
-  line-height: 25px;
+    width: 55%;
+    float: left;
+    color: #fff;
+    font: 12px moon;
+    line-height: 25px;
 }
 
 .welcome-to-site a {
-  float: left;
-  margin: 0 5px;
+    float: left;
+    margin: 0 5px;
 }
 
 .post-item {
-  width: 100%;
-  height: auto;
-  margin: 10px 0;
-  background-color: #151515;
-  box-shadow: 0 0 5px #111;
-  float: left;
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    background-color: #151515;
+    box-shadow: 0 0 5px #111;
+    float: left;
 }
 
 .post-item-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* float: right; */
-  position: absolute;
-  transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* float: right; */
+    position: absolute;
+    transition: all 0.5s ease;
 }
 
 .post-item-image img:hover {
-  transform: scale(1.2);
-  transition: all 0.5s ease;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
 }
 
 .post-item h2 {
-  font: 20px moon;
-  color: #fff;
-  margin: 0;
-  text-align: left;
+    font: 20px moon;
+    color: #fff;
+    margin: 0;
+    text-align: left;
 }
 
 .post-item-content {
-  float: left;
-  width: 100%;
-  padding: 10px 20px;
-  margin: 10px 0;
+    float: left;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
 }
 
 .post-item-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  overflow: hidden;
-  position: relative;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
 }
 
 .post-item p {
-  /* float: left; */
-  color: #666;
-  font: 11px moon;
-  /* padding: 10px 0 0 20px; */
+    /* float: left; */
+    color: #666;
+    font: 11px moon;
+    /* padding: 10px 0 0 20px; */
 }
 
 .post-item-user img {
-  float: left;
+    float: left;
 }
 
 .post-item-user {
-  float: left;
-  width: 100%;
-  /* margin: 20px 0 0 20px; */
+    float: left;
+    width: 100%;
+    /* margin: 20px 0 0 20px; */
 }
 
 .post-item-user h4 {
-  font: 11px moon;
-  float: left;
-  color: #fff;
-  width: 100%;
+    font: 11px moon;
+    float: left;
+    color: #fff;
+    width: 100%;
 }
 
 .post-category {
-  font: 10px moon;
-  color: #fff;
-  float: left;
-  padding: 5px;
-  border-radius: 5px;
-  background: #1c80c7;
-  margin: 5px 0;
+    font: 10px moon;
+    color: #fff;
+    float: left;
+    padding: 5px;
+    border-radius: 5px;
+    background: #1c80c7;
+    margin: 5px 0;
 }
 
 .post-item-user span {
-  float: left;
-  font: 9px moon;
-  color: rgb(196, 195, 195);
-  margin-left: 8px;
-  padding: 0;
+    float: left;
+    font: 9px moon;
+    color: rgb(196, 195, 195);
+    margin-left: 8px;
+    padding: 0;
 }
 
 .side-content-item {
-  width: 100%;
-  height: auto;
-  background: #151515;
-  margin: 20px 0;
-  padding: 10px;
-  border-radius: 5px;
+    width: 100%;
+    height: auto;
+    background: #151515;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .side-content-item h5 {
-  display: block;
-  margin: 10px 0;
-  text-align: center;
-  font: 16px moon;
-  color: #31a7fb;
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    font: 16px moon;
+    color: #31a7fb;
 }
 
 .side-content-item ul li {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .side-content-item h6 {
-  font: 11px moon;
-  color: #fff;
-  display: block;
-  width: 100%;
-  margin: 0;
+    font: 11px moon;
+    color: #fff;
+    display: block;
+    width: 100%;
+    margin: 0;
 }
 
 .side-content-item p {
-  font: 9px moon;
-  color: #666;
-  padding: 0;
-  margin: 0;
+    font: 9px moon;
+    color: #666;
+    padding: 0;
+    margin: 0;
 }
 
 .side-content-item span {
-  font: 10px moon;
-  margin-right: 5px;
+    font: 10px moon;
+    margin-right: 5px;
 }
 
 .side-content-item span svg {
-  margin-right: 2px;
+    margin-right: 2px;
 }
 
 footer {
-  width: 100%;
-  height: 200px;
-  background: #151515;
-  padding: 0 30px;
+    width: 100%;
+    height: 200px;
+    background: #151515;
+    padding: 0 30px;
 }
 
-footer > div {
-  height: 100%;
-  padding: 30px;
+footer>div {
+    height: 100%;
+    padding: 30px;
 }
 
 footer div h3 {
-  display: block;
-  text-align: left;
-  font: 13px moon;
-  color: #fff;
+    display: block;
+    text-align: left;
+    font: 13px moon;
+    color: #fff;
 }
 
 footer div p {
-  display: block;
-  text-align: left;
-  font: 10px moon;
-  color: #666;
-  line-height: 20px;
+    display: block;
+    text-align: left;
+    font: 10px moon;
+    color: #666;
+    line-height: 20px;
 }
 
 footer div a {
-  font-size: 15px;
-  margin: 0 5px;
+    font-size: 15px;
+    margin: 0 5px;
 }
 
 footer ul li {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 5px 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 5px 0;
 }
 
 footer ul li a {
-  color: #555;
-  font: 10px moon;
+    color: #555;
+    font: 10px moon;
 }
 
 .subscribe {
-  width: 100%;
-  height: 40px;
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 footer form input {
-  width: 100%;
-  height: 28px;
-  background: #262626;
-  border: none;
-  font: 10px moon;
-  color: #fff;
-  padding: 0 10px;
+    width: 100%;
+    height: 28px;
+    background: #262626;
+    border: none;
+    font: 10px moon;
+    color: #fff;
+    padding: 0 10px;
 }
 
 footer form button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 50px;
-  height: 28px;
-  border: none;
-  background: #31a7fb;
-  color: #fff;
-  font: 9px moon;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 28px;
+    border: none;
+    background: #31a7fb;
+    color: #fff;
+    font: 9px moon;
 }
 
 footer form button:hover {
-  background: #1c80c7;
+    background: #1c80c7;
 }
 
 .default-nav {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 .default-nav svg {
-  fill: #fff;
+    fill: #fff;
 }
+
 
 /* USER LOGIN AND REGISTER */
 
 .user-box {
-  margin: 3rem 0;
+    margin: 3rem 0;
 }
 
 .user-box h2 {
-  display: block;
-  text-align: center;
-  font: 20px moon;
-  color: #fff;
+    display: block;
+    text-align: center;
+    font: 20px moon;
+    color: #fff;
 }
 
 .userbox-links {
-  text-align: center;
-  font: 13px moon;
-  line-height: 40px!important;
-  display: block;
-  width: 100%;
-  height: 40px;
+    text-align: center;
+    font: 13px moon;
+    line-height: 40px!important;
+    display: block;
+    width: 100%;
+    height: 40px;
 }
+
 .wgoogle {
-  background: linear-gradient(135deg, #d0021b 0%, #d0021b 100%);
-  border-radius: 5px;
-  color: white;
+    background: linear-gradient(135deg, #d0021b 0%, #d0021b 100%);
+    border-radius: 5px;
+    color: white;
 }
 
 .wfacebook {
-  background: linear-gradient(135deg, #009688 0%, #00bcd4 100%);
-  border-radius: 5px;
-  color: white;
-  margin-top: 5px;
+    background: linear-gradient(135deg, #009688 0%, #00bcd4 100%);
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
 }
 
 .wfacebook:hover {
-  background: linear-gradient(135deg, #077267 0%, #00bcd4 100%);
-  color:#fff;
+    background: linear-gradient(135deg, #077267 0%, #00bcd4 100%);
+    color: #fff;
 }
 
 .user-box .wgoogle:hover {
-  background: linear-gradient(135deg, #bb051a 0%, #b80519 100%);
-  color:#fff;
-
+    background: linear-gradient(135deg, #bb051a 0%, #b80519 100%);
+    color: #fff;
 }
 
-
-.user-form input{
+.user-form input {
     width: 100%;
-    background:#181718;
-    border:none;
-    height:40px;
-    padding:0 10px;
-    color:#fff;
-    margin:10px 0;
-    font:11px moon; 
-
+    background: #181718;
+    border: none;
+    height: 40px;
+    padding: 0 10px;
+    color: #fff;
+    margin: 10px 0;
+    font: 11px moon;
 }
 
-.user-form button{
-    width:100%;
-    height:35px;
-    font:11px moon; 
-    background:#009688;
-    color:#fff;
-    border:none;
-    transition: all .5s ease;
-
-}
-
-
-.user-form button:hover{
-    background:#04776c;
+.user-form button {
+    width: 100%;
+    height: 35px;
+    font: 11px moon;
+    background: #009688;
+    color: #fff;
+    border: none;
     transition: all .5s ease;
 }
 
+.user-form button:hover {
+    background: #04776c;
+    transition: all .5s ease;
+}
 
 .user-box a {
     display: block;
     text-align: center;
-    font:11px moon; 
-    color:#fff;
+    font: 11px moon;
+    color: #fff;
+}
+
+.error-msg {
+    display: block;
+    text-align: center;
+    font: 9px moon;
+    color: red;
 }
