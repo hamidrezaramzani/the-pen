@@ -10,11 +10,11 @@ import { checkDuplicateFieldValue } from "../requests";
 const Register = () => {
   const [checkDuplicateFieldMutate] = useMutation(checkDuplicateFieldValue);
 
+  const checkDuplicateEmail = async (data) => await checkDuplicateFieldMutate({ field: "email", value: data });
+
   const schema = yup.object().shape({
     fullname: yup.string().required("it can not be empty"),
-    email: yup.string().required("it can not be empty").email("it's not email").test("checkDuplicateEmail", "already email reserved", async (data) => {
-      return await checkDuplicateFieldMutate({ field: "email", value: data });
-    }),
+    email: yup.string().required("it can not be empty").email("it's not email").test("checkDuplicateEmail", "already email reserved", checkDuplicateEmail),
     password: yup.string().required("it can not be empty").min(6, "Must be at least 6 characters"),
   });
 
