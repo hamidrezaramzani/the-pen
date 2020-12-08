@@ -1,16 +1,15 @@
 import express from "express";
 import config from "config";
 import morgan from "morgan";
-import bodyParser from "body-parser";
 import usersRouter from "./routes/users.js";
+import bodyParser from "body-parser";
 import "./database/connection.js";
 const app = express();
-
-
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
   next();
 });
 
