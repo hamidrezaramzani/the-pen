@@ -1,0 +1,23 @@
+{
+  "name": "the-pen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "es.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamidrezaramzani/the-pen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamidrezaramzani/the-pen/issues"
+  },
+  "homepage": "https://github.com/hamidrezaramzani/the-pen#readme",
+  "dependencies": {
+    "esm-to-cjs": "^1.2.0"
+  }
+}
