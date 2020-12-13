@@ -2,15 +2,19 @@ import { createContext, useReducer } from "react";
 export const LOGIN = "LOGIN_USER";
 export const UsersContext = createContext();
 const UsersProvider = (props) => {
-  const initialState = {};
+  let user = localStorage.getItem("user_pen");
+  console.log(user);
+  if (user) user = JSON.parse(localStorage.getItem("user_pen"));
+  const initialState = user;
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case LOGIN: {
-        localStorage.setItem("user_pen", JSON.stringify(action.items));
-        return {
+        const data = {
           auth: true,
           ...action.items,
         };
+        localStorage.setItem("user_pen", JSON.stringify(data));
+        return data;
       }
       default:
         return state;
