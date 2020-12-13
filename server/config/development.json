@@ -1,4 +1,5 @@
 {
     "PORT" : 8000 , 
-    "MONGODB_URI" : "mongodb://localhost/the_pen"
+    "MONGODB_URI" : "mongodb://localhost/the_pen", 
+    "USER_SECRET" : "the_pen_config"
 }

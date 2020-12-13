@@ -1,6 +1,13 @@
 import { FaSignInAlt, FaUser } from 'react-icons/fa';
 import Link from 'react-router-dom/Link';
+import { queryCache } from "react-query";
+import { useEffect } from 'react';
+
 const Welcome = () => {
+    console.log(queryCache.getQueryData("user"));
+    useEffect(() => {
+        
+    },[]);
     return <div className="welcome">
         <h2>Welcome To
             <br />

@@ -1,6 +1,9 @@
 import Users from "../models/users.js";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
+import _ from "lodash";
+import config from "config";
 const checkDuplicateValue = async (req, res) => {
   try {
     const { field, value } = req.params;
@@ -37,6 +40,42 @@ const checkValidation = (req, res) => {
   }
 };
 
+const login = async (req, res) => {
+  try {
+    const { body } = req;
+    checkValidation(req, res);
+    const user = await Users.findOne({ email: body.email });
+    const isPassword =
+      user && (await bcrypt.compare(body.password, user.password));
+    if (user && isPassword) {
+      const token = jwt.sign(
+        {
+          level: user.level,
+          fullname: user.fullname,
+        },
+        config.get("USER_SECRET")
+      );
+      const data = _.pick(user, ["fullname", "level", "email"]);
+      res.status(200).send({
+        message: "logged",
+        user: {
+          ...data,
+          token,
+        },
+      });
+    } else {
+      res.status(401).send({
+        message: "email or password is invalid",
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+
 const register = async (req, res) => {
   try {
     const { body } = req;
@@ -54,4 +93,4 @@ const register = async (req, res) => {
   }
 };
 
-export { checkDuplicateValue, register };
+export { checkDuplicateValue, register, login };
