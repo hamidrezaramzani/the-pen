@@ -3,7 +3,6 @@ export const LOGIN = "LOGIN_USER";
 export const UsersContext = createContext();
 const UsersProvider = (props) => {
   let user = localStorage.getItem("user_pen");
-  console.log(user);
   if (user) user = JSON.parse(localStorage.getItem("user_pen"));
   const initialState = user;
   const [state, dispatch] = useReducer((state, action) => {
