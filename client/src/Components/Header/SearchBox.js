@@ -1,7 +1,7 @@
 import Col from 'react-bootstrap/Col';
 import { FaSearch } from 'react-icons/fa';
-const SearchBox = () => {
-    return <Col xs="12" md="3">
+const SearchBox = (props) => {
+    return <Col xs="12" md={props.md}>
         <div className="search-input-box">
             <button className="btn btn-block text-info">
                 <FaSearch />

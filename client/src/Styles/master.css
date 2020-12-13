@@ -85,6 +85,7 @@ body {
   color: #fff;
   rotate: 90deg;
   margin: 0 5px;
+  margin-top: 4px;
 }
 
 .welcome {
@@ -711,7 +712,7 @@ footer form button:hover {
   margin-right: 5px !important;
 }
 
-.user-profile-img {
+.user-profile-img { 
   width: 100px;
 }
 
