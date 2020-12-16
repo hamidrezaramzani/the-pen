@@ -7,27 +7,35 @@ import NavbarMenu from "../Header/Navbar";
 import SearchBox from "../Header/SearchBox";
 import UserOption from "../Header/UserOption";
 import Welcome from "../Header/Welcome";
+import MainNavbar from "../Home/MainNavbar";
 function Header() {
   const user = useContext(UsersContext);
   return (
-    <Container fluid>
-      <Row justify-content-center className="header">
-        <NavbarMenu />
-        {user.state.auth ? (
-          <>
-            <SearchBox md={3} />
-            <UserOption />
-          </>
-        ) : (
-          <SearchBox md={5} />
-        )}
+    <>
+      <Container fluid>
+        <Row justify-content-center className="header">
+          <NavbarMenu />
+          {user.state.auth ? (
+            <>
+              <SearchBox md={3} />
+              <UserOption />
+            </>
+          ) : (
+            <SearchBox md={5} />
+          )}
 
-        <Welcome />
-        <div className="go-to-content">
-          <FaAngleDoubleDown />
-        </div>
-      </Row>
-    </Container>
+          <Welcome />
+          <div className="go-to-content">
+            <FaAngleDoubleDown />
+          </div>
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <MainNavbar />
+        </Row>
+      </Container>
+    </>
   );
 }
 
