@@ -171,7 +171,7 @@ body {
 
 .main-navbar a {
   color: #fff !important;
-  font: 10px "moon";
+  font: 12px "moon";
 }
 
 .each-slide {
@@ -708,11 +708,17 @@ footer form button:hover {
   padding: 18px 10px;
 }
 
+.user-dropdown-menu .dropdown-item a {
+  display: block;
+  width: 100%;
+  color: #fff;
+}
+
 .user-dropdown-menu .dropdown-item svg {
   margin-right: 5px !important;
 }
 
-.user-profile-img { 
+.user-profile-img {
   width: 100px;
 }
 
@@ -724,4 +730,99 @@ footer form button:hover {
 .user-dropdown-menu .dropdown-item p {
   font: 11px moon;
   color: #ccc;
+}
+
+/* NEW POST STYLES */
+
+.new-post {
+  padding: 20px;
+  background: #222;
+  border-radius: 5px;
+}
+.new-post .title-post {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: transparent;
+  font: 20px moon;
+  color: #fff;
+  margin: 25px 0;
+  display: block;
+  background: #121212;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.drag-drop-upload {
+  width: 100%;
+  height: auto;
+  border: 2px dashed #121212;
+  padding: 50px 30px;
+}
+
+.drag-drop-upload h2 {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font: 30px moon;
+  margin: 0;
+}
+
+.upload-cover-box {
+  width: 300px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  background: rgb(12, 106, 230);
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.upload-cover-box h5 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 48px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.drag-drop-upload input {
+  display: block;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.megadraft-block {
+  color: #fff !important;
+}
+
+.new-post-rules .card {
+  background: #121212;
+}
+
+.new-post-rules .card-header button {
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+  font: 14px moon;
+  color: #00bcd4;
+  padding: 0;
+}
+
+.new-post-rules .card-body {
+  font: 11px moon;
+  color: #ccc;
+}
+
+.new-post-rules .card-header button:active,
+.new-post-rules .card-header button:focus {
+  box-shadow: none;
 }

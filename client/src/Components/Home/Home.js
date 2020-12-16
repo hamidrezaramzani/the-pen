@@ -7,7 +7,7 @@ const Home = () => {
     return <>
         <Container>
             <Row>
-                <MainNavbar />
+                
                 <MainSlideShow />
                 <PostList />
             </Row>

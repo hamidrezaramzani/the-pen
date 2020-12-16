@@ -3,7 +3,11 @@ import { FaLastfm, FaPen, FaUser } from "react-icons/fa";
 import { RiDraftFill } from "react-icons/ri";
 import { MdFavorite, MdSave, MdExitToApp } from "react-icons/md";
 import profile from "../../images/profile.png";
+import { useContext } from "react";
+import { UsersContext } from "../../Context/UsersProvider";
+import { Link } from "react-router-dom";
 const UserOption = () => {
+  const user = useContext(UsersContext);
   return (
     <Col xs="12" md="1">
       <Dropdown>
@@ -18,17 +22,21 @@ const UserOption = () => {
               className="user-profile-img"
               alt="user profile"
             />
-            <h3>HamidrezaRamzani</h3>
+            <h3>{user.state.user.fullname}</h3>
             <p>hello i am hamidreza ramzani from iran</p>
           </Dropdown.Item>
-          <Dropdown.Item href="#/action-1">
+          <Dropdown.Item href="/profile">
             <FaUser />
             Profile
           </Dropdown.Item>
-          <Dropdown.Item href="#/action-1">
-            <FaPen />
-            New Post
+
+          <Dropdown.Item>
+            <Link to="/new-post">
+              <FaPen />
+              New Post
+            </Link>
           </Dropdown.Item>
+
           <Dropdown.Item href="#/action-1">
             <FaLastfm />
             Recently Post
