@@ -736,7 +736,7 @@ footer form button:hover {
 
 .new-post {
   padding: 20px;
-  background: #161616;
+  background: #222;
   border-radius: 5px;
 }
 .new-post .title-post {
@@ -825,4 +825,39 @@ footer form button:hover {
 .new-post-rules .card-header button:active,
 .new-post-rules .card-header button:focus {
   box-shadow: none;
+}
+
+.post-tags {
+  width: 100%;
+  height: 40px;
+  background: #131313;
+  border-radius: 5px;
+}
+
+.post-tags input {
+  height: 40px;
+  width: 100px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  float: left;
+  font: 11px moon;
+}
+
+.post-tags ul li {
+  height: 40px;
+  float: left;
+  margin: 0 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+  font: 11px moon;
+  line-height: 40px;
+}
+
+.post-tags ul li button{
+  background: transparent;
+  border: none;
+  padding: 0 3px;
+  color:red
 }

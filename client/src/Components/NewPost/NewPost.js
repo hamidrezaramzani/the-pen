@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { FiUpload } from "react-icons/fi";
 import { MegadraftEditor, editorStateFromRaw } from "megadraft";
 import "megadraft/dist/css/megadraft.css";
 import NewPostRules from "./NewPostRules";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import FormErrorHandler from "../FormErrorHandling";
+import * as yup from "yup";
+import FinishNewPost from "./FinishNewPost";
+import PostTags from "./PostTags";
 const NewPost = () => {
+  const [show, setShow] = useState(false);
+
+  const schema = yup.object().shape({
+    title: yup.string().required("can not be empty"),
+  });
+
+  const { register, handleSubmit, errors } = useForm({
+    resolver: yupResolver(schema),
+  });
+
   const [state, setState] = React.useState({
     editorState: editorStateFromRaw(null),
   });
@@ -13,37 +28,43 @@ const NewPost = () => {
     setState({ editorState });
   };
 
+  const onSubmit = (values) => {
+    setShow(true);
+    console.log(values);
+  };
+
+
   return (
     <Container fluid>
       <Row className="justify-content-center p-5">
         <Col xs="12" md="8" className="new-post">
           <h2 className="d-block my-2 text-light moon">Write New Post</h2>
-          <br />
           <NewPostRules />
-          <br />
-          <form>
-            <div className="drag-drop-upload">
-              <h2>Drag and Drop Cover here to upload</h2>
-              <br />
-              <div className="upload-cover-box">
-                <h5>
-                  <FiUpload /> Browse Files
-                </h5>
-                <input type="file" className="cover" />
-              </div>
-            </div>
+          <form method="post" onSubmit={handleSubmit(onSubmit)}>
+            <dragAndDropUpload />
             <input
               type="text"
-              name="content"
+              name="title"
               className="title-post"
               placeholder="enter your post title"
+              ref={register}
             />
+            <FormErrorHandler errors={errors} name="title" />
+            <br />
+            <br />
             <MegadraftEditor
               editorState={state.editorState}
               onChange={onChange}
               placeholder="Add some text here"
             />
-            <button className="btn btn-sm btn-success moon">Posting</button>
+            <br />
+            <PostTags />
+            <br />
+            <br />
+
+            <button type="submit" className="btn btn-sm btn-success moon">
+              Posting
+            </button>
             &nbsp;
             <button className="btn btn-sm btn-danger moon">Reset</button>
           </form>
