@@ -14,6 +14,7 @@ import SelectCover from "./SelectCover";
 import FormLoading from "../FormLoading";
 import swal from "../swal";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 const NewPost = () => {
   const history = useHistory();
   const [newPostMutation, { isLoading }] = useMutation(newPost, {
@@ -41,6 +42,7 @@ const NewPost = () => {
   const [tags, setTags] = useState([]);
   const schema = yup.object().shape({
     title: yup.string().required("can not be empty"),
+    description: yup.string().required("can not be empty"),
   });
 
   const { register, handleSubmit, errors } = useForm({
@@ -53,6 +55,7 @@ const NewPost = () => {
     data.append("content", content);
     data.append("tags", JSON.stringify(tags));
     data.append("cover", cover);
+    data.append("description", values.description);
     await newPostMutation(data);
   };
 
@@ -60,7 +63,13 @@ const NewPost = () => {
     <Container fluid>
       <Row className="justify-content-center p-5">
         <Col xs="12" md="8" className="new-post">
-          <h2 className="d-block my-2 text-light moon">Write New Post</h2>
+          <h2 className="d-block my-2 text-light moon">
+            Write New Post
+            <Link className="btn btn-sm btn-warning float-right" to="/posts">
+              Posts
+            </Link>
+          </h2>
+          <br />
           <NewPostRules />
           <form method="post" onSubmit={handleSubmit(onSubmit)}>
             <br />
@@ -73,6 +82,14 @@ const NewPost = () => {
               ref={register}
             />
             <FormErrorHandler errors={errors} name="title" />
+            <input
+              type="text"
+              name="description"
+              className="description-post"
+              placeholder="enter your post description"
+              ref={register}
+            />
+            <FormErrorHandler errors={errors} name="description" />
             <br />
             <br />
             <CKEditor

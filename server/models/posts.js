@@ -11,10 +11,18 @@ const postsSchema = new Schema({
     type: String,
     required: true,
   },
+  description: {
+    type: String,
+    required: true,
+  },
   tags: [{ type: Object }],
   cover: {
     type: String,
     default: null,
+  },
+  createAt: {
+    type: Number,
+    required: true,
   },
   status: {
     type: Boolean,

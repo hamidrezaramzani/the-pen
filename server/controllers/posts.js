@@ -1,5 +1,6 @@
 import _ from "lodash";
 import Posts from "../models/posts.js";
+import moment from "moment";
 const newPost = async (req, res) => {
   try {
     const { body, files } = req;
@@ -12,6 +13,7 @@ const newPost = async (req, res) => {
 
     body.cover = filename;
     body.tags = JSON.parse(body.tags);
+    body.createAt = new moment().unix();
     const newPost = new Posts(body);
     await newPost.save();
     res.status(200).json({
@@ -25,4 +27,16 @@ const newPost = async (req, res) => {
   }
 };
 
-export { newPost };
+const posts = async (req, res) => {
+  try {
+    const posts = await Posts.find({});
+    res.status(200).json(posts);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+
+export { newPost, posts };

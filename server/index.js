@@ -6,6 +6,7 @@ import postsRouter from "./routes/posts.js";
 import bodyParser from "body-parser";
 import fileUpload from "express-fileupload";
 import "./database/connection.js";
+
 const app = express();
 
 app.use((req, res, next) => {

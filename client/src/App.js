@@ -5,9 +5,15 @@ import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Layout/Header";
 import Loading from "./Components/Loading";
 import UsersProvider from "./Context/UsersProvider";
-import { publicRoutes , privateRoutes } from "./routes";
-import PrivateRoute from './Components/PrivateRoute';
-const queryCache = new QueryCache();
+import { publicRoutes, privateRoutes } from "./routes";
+import PrivateRoute from "./Components/PrivateRoute";
+const queryCache = new QueryCache({
+  defaultConfig: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const renderPublicRoutes = () => {
   return publicRoutes.map((route) => <Route {...route} />);
@@ -15,7 +21,6 @@ const renderPublicRoutes = () => {
 const renderPrivateRoutes = () => {
   return privateRoutes.map((route) => <PrivateRoute {...route} />);
 };
-
 
 function App() {
   return (

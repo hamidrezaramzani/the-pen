@@ -38,8 +38,10 @@ const UserOption = () => {
           </Dropdown.Item>
 
           <Dropdown.Item href="#/action-1">
-            <FaLastfm />
-            Recently Post
+            <Link to="/posts">
+              <FaLastfm />
+              Recently Post
+            </Link>
           </Dropdown.Item>
           <Dropdown.Item href="#/action-1">
             <RiDraftFill />
