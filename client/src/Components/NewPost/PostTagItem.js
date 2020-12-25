@@ -1,10 +1,13 @@
 import { FaTimes } from "react-icons/fa";
 
-const PostTagItem = (props) => {
+const PostTagItem = ({ title, setTags, tags, id }) => {
+  const onRemove = () => {
+    setTags(tags.filter((tag) => tag.id != id));
+  };
   return (
     <li>
-      {props.title}
-      <button>
+      {title}
+      <button type="button" onClick={onRemove}>
         <FaTimes />
       </button>
     </li>
