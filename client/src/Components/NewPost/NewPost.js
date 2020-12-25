@@ -1,17 +1,44 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { MegadraftEditor, editorStateFromRaw } from "megadraft";
-import "megadraft/dist/css/megadraft.css";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { useMutation } from "react-query";
 import NewPostRules from "./NewPostRules";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormErrorHandler from "../FormErrorHandling";
 import * as yup from "yup";
-import FinishNewPost from "./FinishNewPost";
 import PostTags from "./PostTags";
+import { newPost } from "../requests";
+import SelectCover from "./SelectCover";
+import FormLoading from "../FormLoading";
+import swal from "../swal";
+import { useHistory } from "react-router";
 const NewPost = () => {
-  const [show, setShow] = useState(false);
+  const history = useHistory();
+  const [newPostMutation, { isLoading }] = useMutation(newPost, {
+    onSuccess: (res) => {
+      swal.fire({
+        title: "success",
+        html: "Post Added",
+        icon: "success",
+        onClose: () => {
+          history.push("/");
+        },
+      });
+    },
+    onerror: (err) => {
+      swal.fire({
+        title: "error",
+        html: "we have an error on server",
+        icon: "error",
+      });
+    },
+  });
 
+  const [cover, setCover] = useState(null);
+  const [content, setContent] = useState("");
+  const [tags, setTags] = useState([]);
   const schema = yup.object().shape({
     title: yup.string().required("can not be empty"),
   });
@@ -20,19 +47,14 @@ const NewPost = () => {
     resolver: yupResolver(schema),
   });
 
-  const [state, setState] = React.useState({
-    editorState: editorStateFromRaw(null),
-  });
-
-  const onChange = (editorState) => {
-    setState({ editorState });
+  const onSubmit = async (values) => {
+    const data = new FormData();
+    data.append("title", values.title);
+    data.append("content", content);
+    data.append("tags", JSON.stringify(tags));
+    data.append("cover", cover);
+    await newPostMutation(data);
   };
-
-  const onSubmit = (values) => {
-    setShow(true);
-    console.log(values);
-  };
-
 
   return (
     <Container fluid>
@@ -41,7 +63,8 @@ const NewPost = () => {
           <h2 className="d-block my-2 text-light moon">Write New Post</h2>
           <NewPostRules />
           <form method="post" onSubmit={handleSubmit(onSubmit)}>
-            <dragAndDropUpload />
+            <br />
+            <SelectCover setCover={setCover} />
             <input
               type="text"
               name="title"
@@ -52,18 +75,21 @@ const NewPost = () => {
             <FormErrorHandler errors={errors} name="title" />
             <br />
             <br />
-            <MegadraftEditor
-              editorState={state.editorState}
-              onChange={onChange}
-              placeholder="Add some text here"
+            <CKEditor
+              editor={ClassicEditor}
+              data=""
+              onChange={(_, editor) => {
+                const data = editor.getData();
+                setContent(data);
+              }}
             />
             <br />
-            <PostTags />
+            <PostTags tags={tags} setTags={setTags} />
             <br />
             <br />
-
-            <button type="submit" className="btn btn-sm btn-success moon">
-              Posting
+            <button type="submit" className="btn btn-sm btn-info moon ">
+              Register
+              <FormLoading isLoading={isLoading} />
             </button>
             &nbsp;
             <button className="btn btn-sm btn-danger moon">Reset</button>
@@ -73,5 +99,4 @@ const NewPost = () => {
     </Container>
   );
 };
-
 export default NewPost;
