@@ -1,11 +1,21 @@
 import moment from "moment";
-const PostItem = ({ title, content, createAt }) => {
-  console.log(createAt);
+import { FaClock } from "react-icons/fa";
+import PostItemDropDown from "./PostItemDropDown";
+import { Link } from "react-router-dom";
+const PostItem = ({ _id, title, description, createAt }) => {
   return (
     <li>
-      <h3>{title}</h3>
-      <p>{content.substr(0, 120)}...</p>
-      <span>{moment.unix(createAt).format("YYYY/MM/DD h:mm:ss a")}</span>
+      <Link to={`/post/${_id}`}>
+        <h3>
+          {title}
+          <PostItemDropDown />
+        </h3>
+      </Link>
+      <p>{description}</p>
+      <span>
+        <FaClock /> &nbsp;
+        {moment.unix(createAt).format("YYYY/MM/DD h:mm:ss a")}
+      </span>
     </li>
   );
 };
