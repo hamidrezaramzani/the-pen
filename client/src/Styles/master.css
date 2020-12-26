@@ -753,7 +753,7 @@ footer form button:hover {
   border-radius: 5px;
 }
 
-.description-post{
+.description-post {
   width: 100%;
   height: 100px;
   border: none;
@@ -869,25 +869,77 @@ footer form button:hover {
   line-height: 40px;
 }
 
-.post-tags ul li button{
+.post-tags ul li button {
   background: transparent;
   border: none;
   padding: 0 3px;
-  color:red
+  color: red;
 }
 
-
-.posts-list{
+.posts-list {
   padding: 20px;
 }
 
-.posts-list h2{
-  font:23px moon;
-  color:#fff;
+.posts-list h2 {
+  font: 23px moon;
+  color: #fff;
 }
 
 .posts-list ul li {
   width: 100%;
   height: auto;
-  background: red;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.posts-list ul li h3 {
+  display: block;
+  text-align: left;
+  font: 25px moon;
+  margin: 0;
+  padding: 0;
+}
+
+.posts-list ul li a {
+  color: #fff;
+}
+
+.posts-list ul li p {
+  display: block;
+  text-align: left;
+  font: 13px Ubuntu;
+  border-bottom: 1px solid #666;
+  color: #ccc;
+  margin: 10px 0;
+  padding: 0 0 5px 0;
+}
+
+.posts-list ul li {
+  display: block;
+  text-align: left;
+  font: 11px moon;
+  color: #009688;
+}
+
+#PostItemDropDown:focus {
+  box-shadow: none;
+}
+
+#PostItemDropDown::after {
+  content: "";
+  display: none !important;
+}
+
+.PostItemDropDownMenu {
+  background: #151515;
+}
+
+.PostItemDropDownMenu a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.PostItemDropDownMenu a:hover {
+  background: #181818;
+  color: #fff;
 }
