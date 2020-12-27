@@ -1,6 +1,7 @@
 import { Dropdown } from "react-bootstrap";
-import { FaEdit , FaTrash  } from "react-icons/fa";
-const PostItemDropDown = () => {
+import { FaEdit, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
+const PostItemDropDown = ({ id }) => {
   return (
     <Dropdown className="float-right">
       <Dropdown.Toggle
@@ -12,8 +13,14 @@ const PostItemDropDown = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu className="PostItemDropDownMenu">
-        <Dropdown.Item href="#/action-1"><FaEdit /> Edit</Dropdown.Item>
-        <Dropdown.Item href="#/action-2"><FaTrash /> Delete</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">
+          <Link to={`/post/${id}`}>
+            <FaEdit /> Edit
+          </Link>
+        </Dropdown.Item>
+        <Dropdown.Item>
+          <FaTrash /> Delete
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
