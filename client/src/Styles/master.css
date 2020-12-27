@@ -892,14 +892,23 @@ footer form button:hover {
   margin: 20px 0;
 }
 
+<<<<<<< HEAD
 .posts-list ul li h3 {
   display: block;
   text-align: left;
   font: 25px moon;
+=======
+.posts-list ul li h3{
+  display: block;
+  text-align: left;
+  font:25px moon;
+  color:#fff;
+>>>>>>> 1c669c504760d9ba64c846ed32f70b15eff366f8
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
 .posts-list ul li a {
   color: #fff;
 }
@@ -911,12 +920,22 @@ footer form button:hover {
   border-bottom: 1px solid #666;
   color: #ccc;
   margin: 10px 0;
+=======
+.posts-list ul li p{
+  display: block;
+  text-align: left;
+  font:13px Ubuntu;
+  border-bottom: 1px solid #666 ;
+  color:#ccc;
+  margin:10px 0;
+>>>>>>> 1c669c504760d9ba64c846ed32f70b15eff366f8
   padding: 0 0 5px 0;
 }
 
 .posts-list ul li {
   display: block;
   text-align: left;
+<<<<<<< HEAD
   font: 11px moon;
   color: #009688;
 }
@@ -931,10 +950,28 @@ footer form button:hover {
 }
 
 .PostItemDropDownMenu {
+=======
+  font:11px moon;
+  color:#009688;
+}
+
+
+#PostItemDropDown:focus{
+  box-shadow: none;
+}
+
+#PostItemDropDown::after{
+  content: "";
+  display: none!important;
+}
+
+.PostItemDropDownMenu{
+>>>>>>> 1c669c504760d9ba64c846ed32f70b15eff366f8
   background: #151515;
 }
 
 .PostItemDropDownMenu a {
+<<<<<<< HEAD
   color: #fff;
   font-size: 12px;
 }
@@ -943,3 +980,13 @@ footer form button:hover {
   background: #181818;
   color: #fff;
 }
+=======
+  color:#fff;
+  font-size: 12px;
+}
+
+.PostItemDropDownMenu a:hover{
+  background: #181818;
+  color:#fff;
+}
+>>>>>>> 1c669c504760d9ba64c846ed32f70b15eff366f8
