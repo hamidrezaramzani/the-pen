@@ -9,7 +9,6 @@ const PostItem = ({ _id, title, description, createAt }) => {
         <Link to={`/post/${_id}`}>{title}</Link>
         <PostItemDropDown id={_id} />
       </h3>
-
       <p>{description}</p>
       <span>
         <FaClock /> &nbsp;

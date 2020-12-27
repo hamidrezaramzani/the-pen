@@ -892,6 +892,12 @@ footer form button:hover {
   margin: 20px 0;
 }
 
+
+.posts-list ul li h3 {
+  display: block;
+  text-align: left;
+  font: 25px moon;
+}
 .posts-list ul li h3{
   display: block;
   text-align: left;
@@ -901,6 +907,18 @@ footer form button:hover {
   padding: 0;
 }
 
+.posts-list ul li a {
+  color: #fff;
+}
+
+.posts-list ul li p {
+  display: block;
+  text-align: left;
+  font: 13px Ubuntu;
+  border-bottom: 1px solid #666;
+  color: #ccc;
+  margin: 10px 0;
+}
 .posts-list ul li p{
   display: block;
   text-align: left;
@@ -916,6 +934,22 @@ footer form button:hover {
   text-align: left;
   font:11px moon;
   color:#009688;
+  font: 11px moon;
+  color: #009688;
+}
+
+#PostItemDropDown:focus {
+  box-shadow: none;
+}
+
+#PostItemDropDown::after {
+  content: "";
+  display: none !important;
+}
+
+.PostItemDropDownMenu{
+  font:11px moon;
+  color:#009688;
 }
 
 
@@ -929,15 +963,24 @@ footer form button:hover {
 }
 
 .PostItemDropDownMenu{
-  background: #151515;
+background: #151515;
 }
 
 .PostItemDropDownMenu a {
   color:#fff;
-  font-size: 12px;
+  color: #fff;
+font-size: 12px;
 }
+
+.PostItemDropDownMenu a:hover {
+  background: #181818;
+  color:#fff;
+}
+
+ 
 
 .PostItemDropDownMenu a:hover{
   background: #181818;
   color:#fff;
 }
+
