@@ -27,6 +27,19 @@ const newPost = async (req, res) => {
   }
 };
 
+const postsByUserId = async (req, res) => {
+  try {
+    const { userid } = req.params;
+    const posts = await Posts.find({ user_id: userid });
+    res.status(200).json(posts);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+
 const posts = async (req, res) => {
   try {
     const posts = await Posts.find({});
@@ -39,4 +52,4 @@ const posts = async (req, res) => {
   }
 };
 
-export { newPost, posts };
+export { newPost, posts, postsByUserId };

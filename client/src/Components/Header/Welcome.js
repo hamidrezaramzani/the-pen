@@ -19,7 +19,7 @@ const Welcome = () => {
         on the pen site.
       </p>
       <br />
-      {user.state.auth ? <WelcomePanelLinks /> : <WelcomeUsersLinks />}
+      {user.state && user.state.auth ? <WelcomePanelLinks /> : <WelcomeUsersLinks />}
     </div>
   );
 };

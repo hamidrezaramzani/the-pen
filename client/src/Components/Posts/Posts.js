@@ -1,11 +1,17 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PostItem from "./PostItem";
-import { useQuery } from "react-query";
+import { isError, useQuery } from "react-query";
 import PostSekeltonLoading from "./PostSkeletonLoading";
-import { posts } from "../requests";
+import { userPosts } from "../requests";
+import { useContext } from "react";
+import { UsersContext } from "../../Context/UsersProvider";
 const Posts = () => {
-  const { isLoading, data, isFetched } = useQuery("posts", posts);
+  const user = useContext(UsersContext);
+  const userId = user.state.user._id;
+  const { isLoading, data, isFetched , isError } = useQuery(["user_posts", userId], () =>
+    userPosts(userId)
+  );
   const renderSkeletonLoadings = () => {
     return (
       <>
@@ -13,7 +19,6 @@ const Posts = () => {
         <br />
         <PostSekeltonLoading />
         <br />
-
         <PostSekeltonLoading />
         <br />
         <PostSekeltonLoading />
@@ -23,8 +28,18 @@ const Posts = () => {
 
   const renderPostItems = () => {
     // console.log(data);
+    if(isError){
+      return (
+        <>
+          <br />
+          <p className="d-block text-center text-danger moon">
+           We have an error on server
+          </p>
+        </>
+      );
+    }
     if (isFetched) {
-      if (data.data.length) {
+      if (data && data.data.length) {
         return data.data.map((item, index) => (
           <PostItem key={index} {...item} />
         ));

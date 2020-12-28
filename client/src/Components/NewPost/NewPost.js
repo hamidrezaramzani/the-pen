@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
@@ -15,8 +15,10 @@ import FormLoading from "../FormLoading";
 import swal from "../swal";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
+import { UsersContext } from "../../Context/UsersProvider";
 const NewPost = () => {
   const history = useHistory();
+  const user = useContext(UsersContext);
   const [newPostMutation, { isLoading }] = useMutation(newPost, {
     onSuccess: (res) => {
       swal.fire({
@@ -50,13 +52,23 @@ const NewPost = () => {
   });
 
   const onSubmit = async (values) => {
-    const data = new FormData();
-    data.append("title", values.title);
-    data.append("content", content);
-    data.append("tags", JSON.stringify(tags));
-    data.append("cover", cover);
-    data.append("description", values.description);
-    await newPostMutation(data);
+    try {
+      const data = new FormData();
+      data.append("title", values.title);
+      data.append("content", content);
+      data.append("tags", JSON.stringify(tags));
+      data.append("cover", cover);
+      data.append("description", values.description);
+      data.append("user_id",user.state.user._id);
+      await newPostMutation(data);
+    } catch (error) {
+      console.log(error);
+      swal.fire({
+        title: "error",
+        html: "we have an error on server",
+        icon: "error",
+      });
+    }
   };
 
   return (

@@ -15,13 +15,13 @@ function Header() {
       <Container fluid>
         <Row justify-content-center className="header">
           <NavbarMenu />
-          {user.state.auth ? (
+          {user.state && user.state.auth ? (
             <>
               <SearchBox md={3} />
               <UserOption />
             </>
           ) : (
-            <SearchBox md={5} />
+            <SearchBox md={4} />
           )}
 
           <Welcome />

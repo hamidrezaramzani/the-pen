@@ -28,6 +28,11 @@ const postsSchema = new Schema({
     type: Boolean,
     default: true,
   },
+  user_id: {
+    type: Schema.Types.ObjectId,
+    required: true,
+    ref: "Users",
+  },
 });
 
 const postsModel = mongoose.model("posts", postsSchema);

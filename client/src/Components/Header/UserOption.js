@@ -25,9 +25,11 @@ const UserOption = () => {
             <h3>{user.state.user.fullname}</h3>
             <p>hello i am hamidreza ramzani from iran</p>
           </Dropdown.Item>
-          <Dropdown.Item href="/profile">
-            <FaUser />
-            Profile
+          <Dropdown.Item>
+            <Link to="/profile">
+              <FaUser />
+              Profile
+            </Link>
           </Dropdown.Item>
 
           <Dropdown.Item>

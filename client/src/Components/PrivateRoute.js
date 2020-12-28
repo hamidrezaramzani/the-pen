@@ -4,10 +4,12 @@ import propTypes from "prop-types";
 import { Route } from "react-router-dom";
 const PrivateRoute = ({ levels, ...params }) => {
   const user = useContext(UsersContext);
-  const level = user.state.user.level;
-  if (user.state.auth && levels.includes(level)) {
+  const level = user.state && user.state.user.level;
+  if (user.state && user.state.auth && levels.includes(level)) {
     return <Route {...params} />;
   }
+
+  return null;
 };
 
 PrivateRoute.propTypes = {

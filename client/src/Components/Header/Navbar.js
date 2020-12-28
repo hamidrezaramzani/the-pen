@@ -8,11 +8,11 @@ const NavbarMenu = () => {
         <Navbar.Toggle aria-controls="menu-navbar" className="text-warning" />
         <Navbar.Collapse id="menu-navbar">
             <Nav className="mr-auto navbar-menu" >
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Contact me</Nav.Link>
-                <Nav.Link href="#link">About Us</Nav.Link>
-                <Nav.Link href="#link">Last Notes</Nav.Link>
-                <Nav.Link href="#link">Best Notes</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/">Contact me</Nav.Link>
+                <Nav.Link href="/">About Us</Nav.Link>
+                <Nav.Link href="/">Last Notes</Nav.Link>
+                <Nav.Link href="/">Best Notes</Nav.Link>
             </Nav>
         </Navbar.Collapse>
     </Navbar></Col>;
