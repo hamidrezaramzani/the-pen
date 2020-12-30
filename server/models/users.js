@@ -20,6 +20,10 @@ const usersSchema = new Schema({
     type: String,
     default: "user",
   },
+  profile: {
+    type: String,
+    default: "",
+  },
 });
 
 const usersModel = mongoose.model("users", usersSchema);

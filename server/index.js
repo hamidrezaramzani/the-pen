@@ -5,6 +5,7 @@ import usersRouter from "./routes/users.js";
 import postsRouter from "./routes/posts.js";
 import bodyParser from "body-parser";
 import fileUpload from "express-fileupload";
+import path from "path";
 import "./database/connection.js";
 
 const app = express();
@@ -22,6 +23,7 @@ app.use(
   })
 );
 
+app.use("/public/", express.static("public"));
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -55,7 +55,7 @@ const login = async (req, res) => {
         },
         config.get("USER_SECRET")
       );
-      const data = _.pick(user, ["_id" , "fullname", "level", "email"]);
+      const data = _.pick(user, ["_id", "fullname", "level", "email"]);
       res.status(200).send({
         message: "logged",
         user: {
@@ -93,4 +93,17 @@ const register = async (req, res) => {
   }
 };
 
-export { checkDuplicateValue, register, login };
+const getUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await Users.findById(id);
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+
+export { checkDuplicateValue, register, login, getUser };

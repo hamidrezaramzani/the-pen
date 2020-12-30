@@ -1,16 +1,16 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import PostItem from "./PostItem";
-import { isError, useQuery } from "react-query";
+import { useQuery } from "react-query";
 import PostSekeltonLoading from "./PostSkeletonLoading";
 import { userPosts } from "../requests";
-import { useContext } from "react";
-import { UsersContext } from "../../Context/UsersProvider";
+import { useUserId } from "../hooks";
+
 const Posts = () => {
-  const user = useContext(UsersContext);
-  const userId = user.state.user._id;
-  const { isLoading, data, isFetched , isError } = useQuery(["user_posts", userId], () =>
-    userPosts(userId)
+  const id = useUserId();
+  const { isLoading, data, isFetched, isError } = useQuery(
+    ["user_posts", id],
+    () => userPosts(id)
   );
   const renderSkeletonLoadings = () => {
     return (
@@ -28,12 +28,12 @@ const Posts = () => {
 
   const renderPostItems = () => {
     // console.log(data);
-    if(isError){
+    if (isError) {
       return (
         <>
           <br />
           <p className="d-block text-center text-danger moon">
-           We have an error on server
+            We have an error on server
           </p>
         </>
       );

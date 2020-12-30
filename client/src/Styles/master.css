@@ -892,17 +892,16 @@ footer form button:hover {
   margin: 20px 0;
 }
 
-
 .posts-list ul li h3 {
   display: block;
   text-align: left;
   font: 25px moon;
 }
-.posts-list ul li h3{
+.posts-list ul li h3 {
   display: block;
   text-align: left;
-  font:25px moon;
-  color:#fff;
+  font: 25px moon;
+  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -919,21 +918,21 @@ footer form button:hover {
   color: #ccc;
   margin: 10px 0;
 }
-.posts-list ul li p{
+.posts-list ul li p {
   display: block;
   text-align: left;
-  font:13px Ubuntu;
-  border-bottom: 1px solid #666 ;
-  color:#ccc;
-  margin:10px 0;
+  font: 13px Ubuntu;
+  border-bottom: 1px solid #666;
+  color: #ccc;
+  margin: 10px 0;
   padding: 0 0 5px 0;
 }
 
 .posts-list ul li {
   display: block;
   text-align: left;
-  font:11px moon;
-  color:#009688;
+  font: 11px moon;
+  color: #009688;
   font: 11px moon;
   color: #009688;
 }
@@ -947,40 +946,100 @@ footer form button:hover {
   display: none !important;
 }
 
-.PostItemDropDownMenu{
-  font:11px moon;
-  color:#009688;
+.PostItemDropDownMenu {
+  font: 11px moon;
+  color: #009688;
 }
 
-
-#PostItemDropDown:focus{
+#PostItemDropDown:focus {
   box-shadow: none;
 }
 
-#PostItemDropDown::after{
+#PostItemDropDown::after {
   content: "";
-  display: none!important;
+  display: none !important;
 }
 
-.PostItemDropDownMenu{
-background: #151515;
+.PostItemDropDownMenu {
+  background: #151515;
 }
 
 .PostItemDropDownMenu a {
-  color:#fff;
   color: #fff;
-font-size: 12px;
+  color: #fff;
+  font-size: 12px;
 }
 
 .PostItemDropDownMenu a:hover {
   background: #181818;
-  color:#fff;
+  color: #fff;
 }
 
- 
-
-.PostItemDropDownMenu a:hover{
+.PostItemDropDownMenu a:hover {
   background: #181818;
-  color:#fff;
+  color: #fff;
 }
 
+/*    PROFILE  */
+
+.profile-skeleton-loading {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.profile img {
+  width: 165px;
+  height: 165px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100%;
+  padding: 10px;
+  background: #fff;
+}
+
+.select-profile {
+  width: 170px;
+  display: block;
+  margin: auto;
+}
+
+.select-profile input {
+  color: #fff;
+  font: 13px moon;
+}
+
+.profile-form {
+  width: 50%;
+  display: block;
+  margin: 10px auto;
+}
+.profile-form input {
+  width: 100%;
+  height: 35px;
+
+  background: #151515;
+  border: none;
+  padding: 0 10px;
+  color: #fff;
+  font: 13px moon;
+}
+
+
+.profile-form label{
+  font:12px moon;
+  color:#00ffff;
+  margin: 5px 0;
+  display: block;
+  text-align: left;
+}
+
+.profile-form textarea{
+  width: 100%;
+  background: #151515;
+  border:none;
+  resize: none;
+  font: 13px moon;
+  padding:10px;
+  color:#fff;
+}
