@@ -53,7 +53,7 @@ const login = async (req, res) => {
       const token = jwt.sign(
         {
           level: user.level,
-          fullname: user.fullname,
+          email: user.email,
         },
         config.get("USER_SECRET")
       );

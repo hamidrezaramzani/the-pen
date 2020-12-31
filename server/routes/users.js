@@ -6,6 +6,7 @@ import {
   getUser,
   updateProfile,
 } from "../controllers/users.js";
+import { authentication } from "../controllers/authentications.js";
 import { body } from "express-validator";
 const router = express.Router();
 router.post(
@@ -23,7 +24,7 @@ router.post(
   login
 );
 router.get("/check-field/:field/:value", checkDuplicateValue);
-router.get("/user/:id", getUser);
+router.get("/user/:id", authentication, getUser);
 
 router.post("/update-profile", updateProfile);
 export default router;
