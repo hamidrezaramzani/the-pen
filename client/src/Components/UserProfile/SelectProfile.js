@@ -4,7 +4,7 @@ import { useContext } from "react";
 const SelectProfile = (props) => {
   const { setState } = useContext(ProfileContext);
   const getUserProfile = () => {
-    const IMAGES_PATH = "http://localhost:8000/public/images/";
+    const IMAGES_PATH = "http://localhost:8000/public/profiles/";
     return props.img ? IMAGES_PATH + props.img : IMAGES_PATH + "user.png";
   };
   const SUPPORTED_FORMATS = ["png", "jpg", "jpeg", "gif"];
@@ -19,6 +19,7 @@ const SelectProfile = (props) => {
         icon: "error",
       });
       e.target.value = null;
+      setState(null);
       return;
     }
     setState(file);

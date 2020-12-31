@@ -6,6 +6,12 @@ export const checkDuplicateFieldValue = (options) =>
 export const register = (data) => axios.post(`users/register`, data);
 export const login = (data) => axios.post(`users/login`, data);
 export const getUser = (id) => axios.get(`users/user/${id}`);
+export const updateProfile = (data) =>
+  axios.post(`users/update-profile`, data, {
+    headers: {
+      "Content-type": "multipart-formdata",
+    },
+  });
 
 // post requests
 export const newPost = (data) =>

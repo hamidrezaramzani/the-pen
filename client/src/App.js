@@ -7,13 +7,6 @@ import Loading from "./Components/Loading";
 import UsersProvider from "./Context/UsersProvider";
 import { publicRoutes, privateRoutes } from "./routes";
 import PrivateRoute from "./Components/PrivateRoute";
-const queryCache = new QueryCache({
-  defaultConfig: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-});
 
 const renderPublicRoutes = () => {
   return publicRoutes.map((route) => <Route {...route} />);
@@ -25,16 +18,14 @@ const renderPrivateRoutes = () => {
 function App() {
   return (
     <UsersProvider>
-      <ReactQueryCacheProvider queryCache={queryCache}>
-        <BrowserRouter>
-          <Suspense fallback={<Loading />}>
-            <Header />
-            {renderPublicRoutes()}
-            {renderPrivateRoutes()}
-            <Footer />
-          </Suspense>
-        </BrowserRouter>
-      </ReactQueryCacheProvider>
+      <BrowserRouter>
+        <Suspense fallback={<Loading />}>
+          <Header />
+          {renderPublicRoutes()}
+          {renderPrivateRoutes()}
+          <Footer />
+        </Suspense>
+      </BrowserRouter>
     </UsersProvider>
   );
 }

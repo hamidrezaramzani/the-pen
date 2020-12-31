@@ -1,5 +1,11 @@
 import express from "express";
-import { checkDuplicateValue, register, login , getUser } from "../controllers/users.js";
+import {
+  checkDuplicateValue,
+  register,
+  login,
+  getUser,
+  updateProfile,
+} from "../controllers/users.js";
 import { body } from "express-validator";
 const router = express.Router();
 router.post(
@@ -17,5 +23,7 @@ router.post(
   login
 );
 router.get("/check-field/:field/:value", checkDuplicateValue);
-router.get("/user/:id",getUser);
+router.get("/user/:id", getUser);
+
+router.post("/update-profile", updateProfile);
 export default router;

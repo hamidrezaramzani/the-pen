@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import { validationResult } from "express-validator";
 import _ from "lodash";
 import config from "config";
+import path from "path";
+import fs from "fs";
 const checkDuplicateValue = async (req, res) => {
   try {
     const { field, value } = req.params;
@@ -106,4 +108,31 @@ const getUser = async (req, res) => {
   }
 };
 
-export { checkDuplicateValue, register, login, getUser };
+const updateProfile = async (req, res) => {
+  try {
+    const { files, body } = req;
+    console.log(files, body);
+    const user = await Users.findOne({ _id: body.id });
+    let name = user.profile;
+    if (files) {
+      name = Math.ceil(Math.random() * 99999) + files.profile.name;
+      files.profile.mv(path.resolve("public/profiles", name), () => {
+        if (user.profile) {
+          fs.unlinkSync(path.resolve("public/profiles/", user.profile));
+        }
+      });
+    }
+
+    body.profile = name;
+    console.log(body);
+    await Users.updateOne({ _id: body.id }, body);
+    res.status(200).json({ message: "profile updated" });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+
+export { checkDuplicateValue, updateProfile, register, login, getUser };

@@ -24,6 +24,10 @@ const usersSchema = new Schema({
     type: String,
     default: "",
   },
+  bio: {
+    type: String,
+    default: "",
+  },
 });
 
 const usersModel = mongoose.model("users", usersSchema);

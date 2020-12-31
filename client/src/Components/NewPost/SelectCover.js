@@ -11,6 +11,7 @@ const SelectCover = ({ setCover }) => {
       setFileName(file.name);
       setCover(file);
     } else {
+      setCover(null);
       swal.fire({
         title: "Error",
         html: "Please select an image",

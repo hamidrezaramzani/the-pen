@@ -21,7 +21,7 @@ const Profile = () => {
         <Col xs="12" md="12">
           <ProfileProvider>
             <SelectProfile img={data.data.profile} />
-            <ProfileForm fullname={data.data.fullname} />
+            <ProfileForm fullname={data.data.fullname} bio={data.data.bio} />
           </ProfileProvider>
           <ChangePassword />
         </Col>

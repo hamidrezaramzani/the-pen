@@ -996,6 +996,7 @@ footer form button:hover {
   border-radius: 100%;
   padding: 10px;
   background: #fff;
+  object-fit: cover;
 }
 
 .select-profile {
@@ -1025,21 +1026,28 @@ footer form button:hover {
   font: 13px moon;
 }
 
-
-.profile-form label{
-  font:12px moon;
-  color:#00ffff;
+.profile-form label {
+  font: 12px moon;
+  color: #00ffff;
   margin: 5px 0;
   display: block;
   text-align: left;
 }
 
-.profile-form textarea{
+.profile-form textarea {
   width: 100%;
   background: #151515;
-  border:none;
+  border: none;
   resize: none;
   font: 13px moon;
-  padding:10px;
-  color:#fff;
+  padding: 10px;
+  color: #fff;
+}
+
+.profile-form .invalid-input {
+  display: block;
+  text-align: center;
+  font: 12px moon;
+  color: red;
+  margin:10px 0;
 }
