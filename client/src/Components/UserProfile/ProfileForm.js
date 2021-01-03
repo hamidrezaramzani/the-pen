@@ -5,7 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../HandleFormError";
 import { ProfileContext } from "../../Context/ProfileProvider";
 import { useContext } from "react";
-import { useMutation, queryCache, queryCaches } from "react-query";
+import { useMutation, queryCache } from "react-query";
 import { getUser, updateProfile } from "../requests";
 import { UsersContext } from "../../Context/UsersProvider";
 import swal from "../swal";

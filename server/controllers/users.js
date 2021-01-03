@@ -135,4 +135,32 @@ const updateProfile = async (req, res) => {
   }
 };
 
-export { checkDuplicateValue, updateProfile, register, login, getUser };
+const changePassword = async (req, res) => {
+  try {
+    const { password, confirmPassword, id } = req.body;
+    const user = await Users.findOne({ _id: id });
+    const isPasswordCorrect = bcrypt.compareSync(password, user.password);
+    if (isPasswordCorrect) {
+      const newPassword = await getHashedString(confirmPassword);
+      await Users.updateOne({ _id: id }, { password: newPassword });
+      res.status(200).json({ message: "password changed" });
+    } else {
+      res.status(400).json({
+        message: "Password is not true",
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+export {
+  checkDuplicateValue,
+  updateProfile,
+  register,
+  login,
+  getUser,
+  changePassword,
+};

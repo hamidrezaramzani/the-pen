@@ -5,6 +5,8 @@ export const checkDuplicateFieldValue = (options) =>
   axios.get(`users/check-field/${options.field}/${options.value}`);
 export const register = (data) => axios.post(`users/register`, data);
 export const login = (data) => axios.post(`users/login`, data);
+export const changePassword = (data) =>
+  axios.patch(`users/change-password`, data);
 export const getUser = (id) => axios.get(`users/user/${id}`);
 export const updateProfile = (data) =>
   axios.post(`users/update-profile`, data, {
