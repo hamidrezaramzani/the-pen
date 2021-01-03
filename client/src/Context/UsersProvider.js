@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react";
 export const LOGIN = "LOGIN_USER";
+export const LOGOUT = "LOGOUT_USER";
 export const UsersContext = createContext();
 const UsersProvider = (props) => {
   let user = localStorage.getItem("user_pen");
@@ -14,6 +15,13 @@ const UsersProvider = (props) => {
         };
         localStorage.setItem("user_pen", JSON.stringify(data));
         return data;
+      }
+      case LOGOUT: {
+        localStorage.removeItem("user_pen");
+        return {
+          auth: false,
+          user: [],
+        };
       }
       default:
         return state;

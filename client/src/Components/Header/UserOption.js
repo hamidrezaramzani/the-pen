@@ -58,8 +58,10 @@ const UserOption = () => {
             Saved Posts
           </Dropdown.Item>
           <Dropdown.Item href="#/action-1">
-            <MdExitToApp />
-            Exit
+            <Link to="/logout">
+              <MdExitToApp />
+              Exit
+            </Link>
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

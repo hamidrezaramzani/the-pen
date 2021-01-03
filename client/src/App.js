@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import { QueryCache, ReactQueryCacheProvider } from "react-query";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Layout/Header";
 import Loading from "./Components/Loading";

@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import Logout from "./Components/User/Logout";
 const Home = lazy(() => import("./Components/Home/Home"));
 const Register = lazy(() => import("./Components/User/Register"));
 const Login = lazy(() => import("./Components/User/Login"));
@@ -18,6 +19,11 @@ export const publicRoutes = [
   {
     path: "/sign-up",
     component: Register,
+  },
+
+  {
+    path: "/logout",
+    component: Logout,
   },
 ];
 
