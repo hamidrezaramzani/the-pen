@@ -31,7 +31,7 @@ const postsSchema = new Schema({
   user_id: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: "Users",
+    ref: "users",
   },
 });
 

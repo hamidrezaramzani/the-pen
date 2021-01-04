@@ -42,7 +42,9 @@ const postsByUserId = async (req, res) => {
 
 const posts = async (req, res) => {
   try {
-    const posts = await Posts.find({});
+    const posts = await Posts.find({})
+      .populate("user_id")
+      .sort({ createAt: -1 });
     res.status(200).json(posts);
   } catch (error) {
     console.log(error);
