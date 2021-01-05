@@ -867,6 +867,17 @@ footer form button:hover {
   color: #fff;
   font: 11px moon;
   line-height: 40px;
+
+}
+
+
+.header-fixed{
+  position: fixed!important;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: 99999999;
+  background: #111;
 }
 
 .post-tags ul li button {
