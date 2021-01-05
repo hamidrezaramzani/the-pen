@@ -17,7 +17,6 @@ const FixedNavbar = () => {
   });
 
   const onScroll = () => {
-    console.log(onScroll);
     if (window.scrollY > 50) {
       setState(true);
     } else {

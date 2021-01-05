@@ -7,7 +7,7 @@ const postsSchema = new Schema({
     required: true,
     type: String,
   },
-  content: {
+  content: {  
     type: String,
     required: true,
   },

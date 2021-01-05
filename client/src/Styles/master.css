@@ -1062,3 +1062,35 @@ footer form button:hover {
   color: red;
   margin:20px 0;
 }
+
+
+/* ############################## USER INFO #######################*/
+
+.user-info-profile{
+    height: auto;
+    background: #191919;
+    padding: 20px 50px;
+    border-bottom: 10px solid #222;
+}
+
+.user-info-profile img{
+  width: 100px;
+  float: left;
+  border-radius: 100%;
+}
+
+.user-info-profile h2{
+  float: left;
+  color:#fff;
+  font:24px moon;
+  margin-top: 20px;
+}
+
+.user-info-profile p {
+  display: block;
+  float: left;
+  width: 100%;
+  color:#ccc;
+  font:11px moon;
+
+}

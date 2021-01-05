@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import Logout from "./Components/User/Logout";
+import UserInfo from "./Components/User/UserInfo";
 const Home = lazy(() => import("./Components/Home/Home"));
 const Register = lazy(() => import("./Components/User/Register"));
 const Login = lazy(() => import("./Components/User/Login"));
@@ -41,6 +42,11 @@ export const privateRoutes = [
   {
     path: "/profile",
     component: Profile,
+    levels: ["user", "admin"],
+  },
+  {
+    path: "/user-info/:id",
+    component: UserInfo,
     levels: ["user", "admin"],
   },
 ];

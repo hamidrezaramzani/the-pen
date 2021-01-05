@@ -30,7 +30,7 @@ const newPost = async (req, res) => {
 const postsByUserId = async (req, res) => {
   try {
     const { userid } = req.params;
-    const posts = await Posts.find({ user_id: userid });
+    const posts = await Posts.find({ user_id: userid }).populate("user_id");
     res.status(200).json(posts);
   } catch (error) {
     console.log(error);

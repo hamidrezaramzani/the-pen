@@ -1,5 +1,5 @@
 import { FaUser } from "react-icons/fa";
-import image from "../../images/background-2.jpg";
+import { Link } from "react-router-dom";
 import moment from "moment";
 const PostItem = (props) => {
   return (
@@ -20,12 +20,14 @@ const PostItem = (props) => {
           <h2>{props.title}</h2>
           <p>{props.description}</p>
 
-          <div className="post-item-user">
-            <h4>
-              <FaUser />
-              &nbsp; {props.user_id.fullname}
-            </h4>
-          </div>
+          <Link to={`/user-info/` + props.user_id._id}>
+            <div className="post-item-user">
+              <h4>
+                <FaUser />
+                &nbsp; {props.user_id.fullname}
+              </h4>
+            </div>
+          </Link>
           {props.tags.map((item, index) => (
             <div key={index} className="post-category">
               {item.value}
