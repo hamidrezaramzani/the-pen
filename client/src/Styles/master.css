@@ -720,6 +720,7 @@ footer form button:hover {
 
 .user-profile-img {
   width: 100px;
+  border-radius: 100%;
 }
 
 .user-dropdown-menu .dropdown-item h3 {

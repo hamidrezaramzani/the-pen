@@ -6,24 +6,39 @@ import profile from "../../images/profile.png";
 import { useContext } from "react";
 import { UsersContext } from "../../Context/UsersProvider";
 import { Link } from "react-router-dom";
+import { useQuery } from "react-query";
+import { getUser } from "../requests";
 const UserOption = () => {
-  const user = useContext(UsersContext);
+  const { state } = useContext(UsersContext);
+  const id = state.user._id;
+  const { data } = useQuery(["profile", id], () => getUser(id));
   return (
     <Col xs="12" md="1">
       <Dropdown>
         <Dropdown.Toggle id="user-option-dropdown">
-          <img src={profile} alt="user profile" />
+          <img
+            src={
+              data && data.data.profile
+                ? `http://localhost:8000/public/profiles/` + data.data.profile
+                : profile
+            }
+            alt="user profile"
+          />
         </Dropdown.Toggle>
 
         <Dropdown.Menu className="user-dropdown-menu">
           <Dropdown.Item href="#/action-1">
             <img
-              src={profile}
+              src={
+                data && data.data.profile
+                  ? `http://localhost:8000/public/profiles/` + data.data.profile
+                  : profile
+              }
               className="user-profile-img"
               alt="user profile"
             />
-            <h3>{user.state.user.fullname}</h3>
-            <p>hello i am hamidreza ramzani from iran</p>
+            <h3>{data && data.data.fullname}</h3>
+            <p>{data && data.data.bio}</p>
           </Dropdown.Item>
           <Dropdown.Item>
             <Link to="/profile">
