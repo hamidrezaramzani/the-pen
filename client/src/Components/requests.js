@@ -24,4 +24,5 @@ export const newPost = (data) =>
   });
 
 export const posts = () => axios.get(`posts/posts`);
+export const postSlides = () => axios.get(`posts/post-slides`);
 export const userPosts = (id) => axios.get(`posts/user_posts/${id}`);

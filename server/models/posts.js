@@ -7,7 +7,7 @@ const postsSchema = new Schema({
     required: true,
     type: String,
   },
-  content: {  
+  content: {
     type: String,
     required: true,
   },
@@ -32,6 +32,10 @@ const postsSchema = new Schema({
     type: Schema.Types.ObjectId,
     required: true,
     ref: "users",
+  },
+  views: {
+    type: Number,
+    default: 0,
   },
 });
 

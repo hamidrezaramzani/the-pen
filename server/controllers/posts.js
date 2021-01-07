@@ -54,4 +54,18 @@ const posts = async (req, res) => {
   }
 };
 
-export { newPost, posts, postsByUserId };
+const postSlides = async (req, res) => {
+  try {
+    const posts = await Posts.find({ cover: { $ne: "" } })
+      .populate("user_id")
+      .limit(3);
+    res.status(200).json(posts);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+
+export { newPost, posts, postsByUserId, postSlides };

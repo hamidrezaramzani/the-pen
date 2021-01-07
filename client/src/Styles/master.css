@@ -235,6 +235,8 @@ body {
 
 .slider-user img {
   float: left;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .slider-user h4 {
@@ -263,6 +265,7 @@ body {
   color: white;
   border-radius: 5px;
   font: 11px moon;
+  margin: 0 5px;
 }
 
 .slide-show-category:hover {
