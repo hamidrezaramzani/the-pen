@@ -25,8 +25,8 @@ const postsSchema = new Schema({
     required: true,
   },
   status: {
-    type: Boolean,
-    default: true,
+    type: String,
+    default: "published",
   },
   user_id: {
     type: Schema.Types.ObjectId,

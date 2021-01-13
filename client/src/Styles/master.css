@@ -850,6 +850,7 @@ footer form button:hover {
   height: 40px;
   background: #131313;
   border-radius: 5px;
+  margin: 30px 0;
 }
 
 .post-tags input {

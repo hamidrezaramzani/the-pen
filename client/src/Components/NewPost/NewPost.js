@@ -16,6 +16,8 @@ import swal from "../swal";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { UsersContext } from "../../Context/UsersProvider";
+import NewPostTitle from "./NewPostTitle";
+import NewPostInput from "./NewPostInput";
 const NewPost = () => {
   const history = useHistory();
   const user = useContext(UsersContext);
@@ -59,7 +61,7 @@ const NewPost = () => {
       data.append("tags", JSON.stringify(tags));
       data.append("cover", cover);
       data.append("description", values.description);
-      data.append("user_id",user.state.user._id);
+      data.append("user_id", user.state.user._id);
       await newPostMutation(data);
     } catch (error) {
       console.log(error);
@@ -71,55 +73,39 @@ const NewPost = () => {
     }
   };
 
+  const onChange = (_, editor) => {
+    const data = editor.getData();
+    setContent(data);
+  };
+
   return (
     <Container fluid>
       <Row className="justify-content-center p-5">
         <Col xs="12" md="8" className="new-post">
-          <h2 className="d-block my-2 text-light moon">
-            Write New Post
-            <Link className="btn btn-sm btn-warning float-right" to="/posts">
-              Posts
-            </Link>
-          </h2>
-          <br />
+          <NewPostTitle />
           <NewPostRules />
           <form method="post" onSubmit={handleSubmit(onSubmit)}>
             <br />
             <SelectCover setCover={setCover} />
-            <input
-              type="text"
+            <NewPostInput
               name="title"
+              placeholder="Enter your post title"
               className="title-post"
-              placeholder="enter your post title"
-              ref={register}
+              errors={errors}
             />
-            <FormErrorHandler errors={errors} name="title" />
-            <input
-              type="text"
+            <NewPostInput
               name="description"
+              placeholder="Enter your post description"
               className="description-post"
-              placeholder="enter your post description"
-              ref={register}
+              errors={errors}
             />
-            <FormErrorHandler errors={errors} name="description" />
-            <br />
-            <br />
-            <CKEditor
-              editor={ClassicEditor}
-              data=""
-              onChange={(_, editor) => {
-                const data = editor.getData();
-                setContent(data);
-              }}
-            />
-            <br />
+            <CKEditor editor={ClassicEditor} onChange={onChange} />
             <PostTags tags={tags} setTags={setTags} />
-            <br />
-            <br />
             <button type="submit" className="btn btn-sm btn-info moon ">
               Register
               <FormLoading isLoading={isLoading} />
             </button>
+            <button className="btn btn-sm btn-warning moon mx-2">draft</button>
             &nbsp;
             <button className="btn btn-sm btn-danger moon">Reset</button>
           </form>
