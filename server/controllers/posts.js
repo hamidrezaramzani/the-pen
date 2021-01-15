@@ -68,4 +68,19 @@ const postSlides = async (req, res) => {
   }
 };
 
-export { newPost, posts, postsByUserId, postSlides };
+const deleteUserPost = async (req, res) => {
+  try {
+    const { id, userid } = req.params;
+    await Posts.findByIdAndRemove({ _id: id, user_id: userid });
+    res.status(200).json({
+      removePost: true,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+
+export { newPost, posts, postsByUserId, postSlides, deleteUserPost };

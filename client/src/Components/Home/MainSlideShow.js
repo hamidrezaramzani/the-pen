@@ -6,7 +6,6 @@ import { useQuery } from "react-query";
 import { postSlides } from "../requests";
 const MainSlideShow = () => {
   const { data } = useQuery("slides", postSlides);
-  console.log(data);
   const renderSlides = () => {
     if (data) {
       return (

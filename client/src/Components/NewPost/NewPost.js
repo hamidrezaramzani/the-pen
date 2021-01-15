@@ -6,7 +6,6 @@ import { useMutation } from "react-query";
 import NewPostRules from "./NewPostRules";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import FormErrorHandler from "../FormErrorHandling";
 import * as yup from "yup";
 import PostTags from "./PostTags";
 import { newPost } from "../requests";
@@ -14,7 +13,6 @@ import SelectCover from "./SelectCover";
 import FormLoading from "../FormLoading";
 import swal from "../swal";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
 import { UsersContext } from "../../Context/UsersProvider";
 import NewPostTitle from "./NewPostTitle";
 import NewPostInput from "./NewPostInput";
@@ -22,7 +20,7 @@ const NewPost = () => {
   const history = useHistory();
   const user = useContext(UsersContext);
   const [newPostMutation, { isLoading }] = useMutation(newPost, {
-    onSuccess: (res) => {
+    onSuccess: () => {
       swal.fire({
         title: "success",
         html: "Post Added",
@@ -49,7 +47,7 @@ const NewPost = () => {
     description: yup.string().required("can not be empty"),
   });
 
-  const { register, handleSubmit, errors } = useForm({
+  const { register, handleSubmit, errors, getValues } = useForm({
     resolver: yupResolver(schema),
   });
 
@@ -92,12 +90,14 @@ const NewPost = () => {
               placeholder="Enter your post title"
               className="title-post"
               errors={errors}
+              register={register}
             />
             <NewPostInput
               name="description"
               placeholder="Enter your post description"
               className="description-post"
               errors={errors}
+              register={register}
             />
             <CKEditor editor={ClassicEditor} onChange={onChange} />
             <PostTags tags={tags} setTags={setTags} />
@@ -105,7 +105,6 @@ const NewPost = () => {
               Register
               <FormLoading isLoading={isLoading} />
             </button>
-            <button className="btn btn-sm btn-warning moon mx-2">draft</button>
             &nbsp;
             <button className="btn btn-sm btn-danger moon">Reset</button>
           </form>
