@@ -30,7 +30,7 @@ const PostItem = (props) => {
           </Link>
           {props.tags.map((item, index) => (
             <div key={index} className="post-category">
-              {item.value}
+              <Link className="text-light" to={`/posts-by-tag/${item.value}`}>{item.value}</Link>
             </div>
           ))}
         </div>

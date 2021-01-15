@@ -7,11 +7,16 @@ const Login = lazy(() => import("./Components/User/Login"));
 const NewPost = lazy(() => import("./Components/NewPost/NewPost"));
 const Posts = lazy(() => import("./Components/Posts/Posts"));
 const Profile = lazy(() => import("./Components/UserProfile/Profile"));
+const PostsTag = lazy(() => import("./Components/PostsTag/PostsTag"));
 export const publicRoutes = [
   {
     path: "/",
     component: Home,
     exact: true,
+  },
+  {
+    path: "/posts-by-tag/:tag",
+    component:PostsTag,
   },
   {
     path: "/sign-in",

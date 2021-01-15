@@ -24,6 +24,7 @@ export const newPost = (data) =>
   });
 
 export const posts = () => axios.get(`posts/posts`);
+export const postsTag = (tag) => axios.get(`posts/posts-tag/` + tag);
 export const postSlides = () => axios.get(`posts/post-slides`);
 export const userPosts = (id) => axios.get(`posts/user_posts/${id}`);
 export const deletePost = ({id, userid}) =>

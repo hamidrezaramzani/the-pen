@@ -83,4 +83,16 @@ const deleteUserPost = async (req, res) => {
   }
 };
 
-export { newPost, posts, postsByUserId, postSlides, deleteUserPost };
+const postsTag = async (req, res) => {
+  try {
+    const { tag } = req.params;
+    const posts = await Posts.find({ "tags.value": tag }).populate("user_id");
+    res.status(200).json(posts);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "error",
+    });
+  }
+};
+export { postsTag, newPost, posts, postsByUserId, postSlides, deleteUserPost };
