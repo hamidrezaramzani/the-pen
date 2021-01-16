@@ -16,11 +16,8 @@ function Header() {
             <FaAngleDoubleDown />
           </div>
         </Row>
-      </Container>
-      <Container>
-        <Row>
-          <MainNavbar />
-        </Row>
+        <br />
+        <br />
       </Container>
     </>
   );
